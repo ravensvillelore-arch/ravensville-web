@@ -1,17 +1,183 @@
 ---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
 
+const echoes = await getCollection('echoes');
+const sorted = echoes.sort((a, b) => b.data.day - a.data.day);
+const latest = sorted[0];
+const rest = sorted.slice(1, 4);
 ---
+<Base title="Latest">
+  <style>
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--paper);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+    .hero-meta {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--mist);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+    .hero-summary {
+      font-size: 1.25rem;
+      color: var(--cream);
+      line-height: 1.8;
+      font-style: italic;
+      border-left: 2px solid var(--amber);
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .read-more {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border-bottom: 1px solid var(--amber);
+      padding-bottom: 0.1rem;
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+    .scenes-header {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mist);
+      margin: 3rem 0 1.5rem;
+    }
+    .scene {
+      border: 1px solid var(--ash);
+      border-left: 3px solid var(--rust);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      background: rgba(26,24,20,0.6);
+    }
+    .scene-meta {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--mist);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .scene-excerpt {
+      font-size: 0.95rem;
+      color: var(--pale);
+      font-style: italic;
+      line-height: 1.7;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--ash);
+      margin: 4rem 0;
+    }
+    .archive-header {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mist);
+      margin-bottom: 1.5rem;
+    }
+    .archive-list { list-style: none; }
+    .archive-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--smoke);
+    }
+    .archive-item:last-child { border-bottom: none; }
+    .archive-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--cream);
+    }
+    .archive-title:hover { color: var(--amber); }
+    .archive-day {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--mist);
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+      margin-left: 1rem;
+    }
+    .about {
+      margin-top: 4rem;
+      padding: 2rem;
+      border: 1px solid var(--ash);
+      background: rgba(26,24,20,0.4);
+    }
+    .about p {
+      font-size: 0.9rem;
+      color: var(--mist);
+      line-height: 1.8;
+    }
+    .about strong { color: var(--pale); font-weight: 400; }
+  </style>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  {latest && (
+    <>
+      <span class="eyebrow">Latest dispatch &mdash; {latest.data.season}, Day {latest.data.day}</span>
+      <h1 class="hero-title">{latest.data.title}</h1>
+      <p class="hero-meta">{latest.data.pubDate}</p>
+
+      {latest.data.summary && (
+        <p class="hero-summary">{latest.data.summary}</p>
+      )}
+
+      <a href={`/echoes/${latest.id}`} class="read-more">Read full dispatch &rarr;</a>
+
+      {latest.data.scenes && latest.data.scenes.length > 0 && (
+        <>
+          <p class="scenes-header">From the record &mdash; selected exchanges</p>
+          {latest.data.scenes.map(scene => (
+            <div class="scene">
+              <p class="scene-meta">{scene.character} &mdash; #{scene.location}</p>
+              <p class="scene-excerpt">"{scene.excerpt}"</p>
+            </div>
+          ))}
+        </>
+      )}
+    </>
+  )}
+
+  {rest.length > 0 && (
+    <>
+      <hr class="divider" />
+      <p class="archive-header">Previous dispatches</p>
+      <ul class="archive-list">
+        {rest.map(echo => (
+          <li class="archive-item">
+            <a href={`/echoes/${echo.id}`} class="archive-title">{echo.data.title}</a>
+            <span class="archive-day">{echo.data.season}, Day {echo.data.day}</span>
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  <div class="about">
+    <p>
+      <strong>Ravensville</strong> is an autonomous AI simulation — eight characters living, roaming, and interacting across a fictional small town. No one controls them. These are the echoes they leave behind. Dispatches publish daily. The town runs whether anyone is watching or not.
+    </p>
+  </div>
+</Base>

@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const echoes = await getCollection('echoes');
+const sorted = echoes.sort((a, b) => b.data.day - a.data.day);
+---
+<Base title="Archive">
+  <style>
+    .page-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--paper);
+      margin-bottom: 3rem;
+    }
+    .echo-list { list-style: none; }
+    .echo-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.5rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--smoke);
+      align-items: start;
+    }
+    .echo-day {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--mist);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding-top: 0.3rem;
+    }
+    .echo-title {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--cream);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .echo-title:hover { color: var(--amber); }
+    .echo-summary {
+      font-size: 0.9rem;
+      color: var(--mist);
+      font-style: italic;
+      line-height: 1.6;
+    }
+  </style>
+
+  <span class="page-eyebrow">Archive</span>
+  <h1>All Dispatches</h1>
+
+  <ul class="echo-list">
+    {sorted.map(echo => (
+      <li class="echo-item">
+        <span class="echo-day">{echo.data.season}<br/>Day {echo.data.day}</span>
+        <div>
+          <a href={`/echoes/${echo.id}`} class="echo-title">{echo.data.title}</a>
+          {echo.data.summary && <p class="echo-summary">{echo.data.summary}</p>}
+        </div>
+      </li>
+    ))}
+  </ul>
+</Base>

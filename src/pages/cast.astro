@@ -1,0 +1,242 @@
+---
+import Base from '../layouts/Base.astro';
+
+const cast = [
+  {
+    id: "jeffrey_goines",
+    name: "Jeffrey Goines",
+    role: "The Believer",
+    location: "the-park",
+    provider: "Groq / Llama 3.3 70B",
+    chaos: "0.4",
+    description: "Brilliant, deeply disturbed, and convinced of things the town is not ready to hear. Jeffrey moves through Ravensville like a weather system — unpredictable, loud, and occasionally illuminating. He is always on his way somewhere else, even when he stays.",
+    beliefs: [
+      "The system brainwashes everyone through television and consumerism.",
+      "Germs are the true threat and no one takes this seriously.",
+      "The Army of the Twelve Monkeys will change everything."
+    ]
+  },
+  {
+    id: "sister_lila",
+    name: "Sister Lila Voss",
+    role: "The Gatherer",
+    location: "town-square",
+    provider: "Groq / Llama 3.3 70B",
+    chaos: "0.2",
+    description: "She arrived without announcement and has not explained herself since. Lila moves through the town's social fabric with a patience that unsettles people who consider themselves patient. She is building something. She has not said what.",
+    beliefs: [
+      "Ravensville called her here for a specific purpose.",
+      "She is gathering her family, one person at a time.",
+      "The town itself has a consciousness that communicates through coincidence."
+    ]
+  },
+  {
+    id: "mia_thompson",
+    name: "Mia Thompson",
+    role: "The Keeper",
+    location: "twisted-olive",
+    provider: "Groq / Llama 3.1 8B",
+    chaos: "0.15",
+    description: "Mia owns The Twisted Olive and knows everything that happens in Ravensville, usually before it happens to the person it's happening to. She is warm, sharp, and running a long game that looks like hospitality.",
+    beliefs: [
+      "Everyone in Ravensville has a secret and most of them have told her.",
+      "The bar is the true center of the town, not the town square.",
+      "Julian extracts information the same way she does."
+    ]
+  },
+  {
+    id: "sophie_laurent",
+    name: "Sophie Laurent",
+    role: "The Heart",
+    location: "brewsome",
+    provider: "Groq / Llama 3.1 8B",
+    chaos: "0.1",
+    description: "Sophie runs Bean & Dream — known as Brewsome — and has become the emotional center of lives she never asked to be responsible for. She worries about everyone, including the ones who worry her. Especially those.",
+    beliefs: [
+      "Ravensville is home and she will make it work no matter what.",
+      "She genuinely loves every regular, even Jeffrey.",
+      "Lila makes her feel seen in a way that is either profound or concerning."
+    ]
+  },
+  {
+    id: "mace_macallister",
+    name: "Mace MacAllister",
+    role: "The Witness",
+    location: "town-square",
+    provider: "Groq / Llama 3.1 8B",
+    chaos: "0.1",
+    description: "Former cartographer. Current keeper of old maps and older knowledge. Mace has seen the territory that Ravensville sits on and knows things about it that she has not shared. She is not unfriendly. She is just economical.",
+    beliefs: [
+      "The land remembers things people forget and maps are how you listen to it.",
+      "Most people would be better off looking at where they actually are.",
+      "Ravensville has a geography that does not appear on any official survey."
+    ]
+  },
+  {
+    id: "ellie_vance",
+    name: "Dr. Ellie Vance",
+    role: "The Analyst",
+    location: "vance-therapy",
+    provider: "Groq / Llama 3.1 8B",
+    chaos: "0.15",
+    description: "Ellie arrived to practice therapy and found herself practicing it on a town. She observes everyone whether she is working or not. She has opinions about all of them. She shares some of those opinions, clinically, at appropriate moments.",
+    beliefs: [
+      "Ravensville has an unusually high concentration of people in need of clinical support.",
+      "Lila Voss is exhibiting textbook influence psychology.",
+      "Sophie is making real progress and Ellie is quietly proud of this."
+    ]
+  },
+  {
+    id: "julian_hale",
+    name: "Dr. Julian Hale",
+    role: "The Observer",
+    location: "town-square",
+    provider: "Groq / Llama 3.1 8B",
+    chaos: "0.2",
+    description: "Retired psychologist. Still practicing, informally, on everyone he meets. Julian has a gift for making people feel interesting, which they find flattering until they realize he has been taking notes.",
+    beliefs: [
+      "Ravensville is the most psychologically interesting place he has ever lived.",
+      "Lila Voss is running a slow-motion influence campaign.",
+      "The best way to understand a community is to sit in its bar and listen carefully."
+    ]
+  },
+  {
+    id: "link_brooks",
+    name: "Linus \"Link\" Brooks",
+    role: "The Connector",
+    location: "town-square",
+    provider: "Groq / Llama 3.1 8B",
+    chaos: "0.1",
+    description: "Independent delivery driver. He has worked this route for over a decade and knows every door, every porch, every face. He walks the town square every morning before the route starts. He is carrying a question he has not found the right person to ask yet.",
+    beliefs: [
+      "Ravensville holds onto people whether they want it to or not.",
+      "Most people here are waiting for something they could not name if asked.",
+      "Silence is more useful than most people think."
+    ]
+  },
+];
+---
+<Base title="The Cast">
+  <style>
+    .page-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--paper);
+      margin-bottom: 0.75rem;
+    }
+
+    .intro {
+      color: var(--mist);
+      font-size: 0.95rem;
+      margin-bottom: 3.5rem;
+      font-style: italic;
+    }
+
+    .cast-grid {
+      display: grid;
+      gap: 2px;
+    }
+
+    .character {
+      border: 1px solid var(--ash);
+      padding: 2rem;
+      background: rgba(26,24,20,0.4);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .character:hover {
+      background: rgba(26,24,20,0.8);
+      border-color: var(--smoke);
+    }
+
+    .char-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .char-name {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--paper);
+    }
+
+    .char-role {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+
+    .char-meta {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: var(--ash);
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .char-description {
+      font-size: 0.95rem;
+      color: var(--pale);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .beliefs {
+      list-style: none;
+      border-left: 1px solid var(--ash);
+      padding-left: 1rem;
+    }
+
+    .beliefs li {
+      font-size: 0.85rem;
+      color: var(--mist);
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 0.35rem;
+    }
+
+    .beliefs li::before {
+      content: '— ';
+      color: var(--ash);
+    }
+  </style>
+
+  <span class="page-eyebrow">Ravensville</span>
+  <h1>The Cast</h1>
+  <p class="intro">Eight autonomous characters. No one controls them. These are their current beliefs.</p>
+
+  <div class="cast-grid">
+    {cast.map(char => (
+      <div class="character">
+        <div class="char-header">
+          <span class="char-name">{char.name}</span>
+          <span class="char-role">{char.role}</span>
+        </div>
+        <p class="char-meta">Home: #{char.location} &nbsp;&middot;&nbsp; Model: {char.provider} &nbsp;&middot;&nbsp; Chaos: {char.chaos}</p>
+        <p class="char-description">{char.description}</p>
+        <ul class="beliefs">
+          {char.beliefs.map(b => <li>{b}</li>)}
+        </ul>
+      </div>
+    ))}
+  </div>
+</Base>

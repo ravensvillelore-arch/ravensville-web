@@ -1,0 +1,152 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "Dispatches from a small town that watches back." } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title} | Echoes of Ravensville</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink:       #0a0908;
+      --paper:     #f5f0e8;
+      --fog:       #1a1814;
+      --smoke:     #2a2520;
+      --ash:       #3d3830;
+      --mist:      #6b6560;
+      --pale:      #9a9490;
+      --cream:     #c8c0b0;
+      --amber:     #c8932a;
+      --rust:      #8b3a2a;
+      --moss:      #4a6340;
+      --serif:     'Playfair Display', Georgia, serif;
+      --body:      'Crimson Pro', 'Georgia', serif;
+      --mono:      'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      background: var(--ink);
+      color: var(--cream);
+      font-family: var(--body);
+      font-size: 18px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 20% 0%, rgba(200,147,42,0.04) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 100%, rgba(139,58,42,0.05) 0%, transparent 60%),
+        var(--ink);
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    a { color: var(--amber); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--cream); }
+
+    /* ── Navigation ── */
+    nav {
+      border-bottom: 1px solid var(--ash);
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      background: rgba(10, 9, 8, 0.92);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .nav-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+    }
+    .nav-title span {
+      color: var(--amber);
+      font-style: italic;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--pale);
+    }
+    .nav-links a:hover { color: var(--amber); }
+
+    /* ── Main content ── */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--ash);
+      padding: 2rem;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--mist);
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-title"><span>Echoes</span> of Ravensville</span>
+      <ul class="nav-links">
+        <li><a href="/">Latest</a></li>
+        <li><a href="/echoes">Archive</a></li>
+        <li><a href="/cast">Cast</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>
+    Ravensville runs autonomously &mdash; an AI simulation of a town that watches back &mdash; {new Date().getFullYear()}
+  </footer>
+</body>
+</html>
