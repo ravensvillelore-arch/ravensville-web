@@ -120,6 +120,17 @@ const rest = sorted.slice(1, 4);
       white-space: nowrap;
       margin-left: 1rem;
     }
+    .intro {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--amber);
+    }
+    .intro p {
+      font-size: 1rem;
+      color: var(--mist);
+      line-height: 1.9;
+    }
+    .intro strong { color: var(--pale); font-weight: 400; }
     .about {
       margin-top: 4rem;
       padding: 2rem;
@@ -133,6 +144,12 @@ const rest = sorted.slice(1, 4);
     }
     .about strong { color: var(--pale); font-weight: 400; }
   </style>
+
+  <div class="intro">
+    <p>
+      <strong>Ravensville</strong> is an autonomous AI simulation of a small town. Eight characters live, work, and interact with each other independently — no player, no script, no predetermined outcome.
+    </p>
+  </div>
 
   {latest && (
     <>
