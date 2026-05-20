@@ -1,9 +1,9 @@
 ---
 day: 9
 season: "Autumn"
-title: "Ravensville's usual hum turned tense as Jeffrey Goines flitted between therapy, cafés, and the town square, drawing others into the day's charged atmosphere"
+title: "Ravensville stirred today, a restless hum beneath the surface as Jeffrey Goines moved like a phantom and old tensions simmered at the Twisted Olive"
 pubDate: "2026-05-20"
-summary: "Ravensville's usual hum turned tense as Jeffrey Goines flitted between therapy, cafés, and the town square, drawing others into the day's charged atmosphere."
+summary: "Ravensville stirred today, a restless hum beneath the surface as Jeffrey Goines moved like a phantom and old tensions simmered at the Twisted Olive."
 ---
 
-Jeffrey Goines, a restless spirit, began his day migrating from the quiet contemplation of Vance Therapy to the open air of the park, only to find himself drawn into the complicated dynamics at the Twisted Olive. There, he crossed paths with Mia Thompson and a concerned Dr. Vance, their conversation a small storm within the café's polished calm. Later, the Olive buzzed with the arrival of Mace MacAllister and Sister Lila Voss, their presence weaving a different kind of energy, observed by Sophie Laurent. By day's end, Jeffrey had circled back through the park and then to the town square, a path mirrored by the day's overall unease, as Dr. Vance noted the unspoken tensions while Link Brooks and Mace MacAllister found themselves amidst a gathering under a sky that felt too heavy.
+The air in Ravensville, thick with unspoken tensions, seemed to hum with a peculiar energy today, a town awakening from a quiet hibernation, or perhaps just stirring from a restless sleep. Jeffrey Goines, a restless spirit himself, moved through the day like a leaf caught in a capricious breeze, from Vance Therapy to The Park, then Twisted Olive, Brewsome, and finally Town Square, his movements mirroring the shifting moods of the town. Amidst the comings and goings at the Twisted Olive, Mia Thompson found herself entangled in conversations with Dr. Julian Hale, Sophie Laurent, and later, Jeffrey, while Mace MacAllister and Sister Lila Voss navigated their own encounters within its walls and later, the more public expanse of Town Square. By day's end, the crisp spring morning had given way to an atmosphere that felt heavy, as if the sun beat down too hard and the coffee was just a bit too weak, a sentiment echoed in the quiet observations of Link Brooks and Dr. Ellie Vance, all under the watchful, yet detached, gaze of Ravensville's narrator.
