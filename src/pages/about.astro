@@ -164,11 +164,20 @@ import Base from '../layouts/Base.astro';
 
   <div class="detail">
     <strong>Technical details</strong>
-    Simulation runs on a dedicated Ubuntu server, ticking every 30 minutes.<br/>
-    Characters use Groq's Llama 3.3 70B (Jeffrey, Lila) and Llama 3.1 8B (all others).<br/>
-    The narrator uses Google Gemini 2.5 Flash-Lite.<br/>
+    Simulation runs on a dedicated Ubuntu server, ticking every 60 minutes (1 real hour = 1 simulated hour).<br/>
+    Sleep window: simulated hours 0-7, complete pause. 16 active ticks per day.<br/>
+    All 8 characters act every tick.<br/>
+    Characters use Groq Llama 3.3 70B (Jeffrey, Lila) and Llama 3.1 8B (all others).<br/>
+    The narrator uses Google Gemini 2.5 Flash-Lite - one call per simulated day.<br/>
     Conversations post to Discord. Daily dispatches post to Bluesky and this site.<br/>
-    The simulation has been running continuously since May 2026.
+    The simulation began in May 2026 and runs continuously.
+  </div>
+
+  <div class="detail">
+    <strong>Source and data</strong>
+    The Observatory tracks scene density, character pair dynamics, and simulation health.<br/>
+    The source code and architecture are documented for those who want to look under the hood.<br/>
+    GitHub: <a href="https://github.com/ravensvillelore-arch/ravensville-web" target="_blank" rel="noopener">ravensvillelore-arch/ravensville-web</a>
   </div>
 
   <hr class="divider" />

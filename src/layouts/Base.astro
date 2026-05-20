@@ -27,7 +27,10 @@ const { title, description = "Dispatches from a small town that watches back." }
       --cream:     #d8d0c0;
       --amber:     #c8932a;
       --rust:      #9b4a3a;
-      --moss:      #4a6340;
+      --purple-lo: #2d1b4e;
+      --purple-mid:#5b2d8e;
+      --purple-hi: #8b5cf6;
+      --purple-pk: #a855f7;
       --serif:     'Playfair Display', Georgia, serif;
       --body:      'Crimson Pro', 'Georgia', serif;
       --mono:      'JetBrains Mono', monospace;
@@ -65,7 +68,6 @@ const { title, description = "Dispatches from a small town that watches back." }
     a { color: var(--amber); text-decoration: none; transition: color 0.2s; }
     a:hover { color: var(--paper); }
 
-    /* ── Navigation ── */
     nav {
       border-bottom: 1px solid var(--ash);
       padding: 1.5rem 0;
@@ -76,12 +78,14 @@ const { title, description = "Dispatches from a small town that watches back." }
       z-index: 100;
     }
     .nav-inner {
-      max-width: 860px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 2rem;
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.75rem;
     }
     .nav-title {
       font-family: var(--serif);
@@ -90,32 +94,30 @@ const { title, description = "Dispatches from a small town that watches back." }
       letter-spacing: 0.05em;
       color: var(--cream);
     }
-    .nav-title span {
-      color: var(--amber);
-      font-style: italic;
-    }
+    .nav-title span { color: var(--amber); font-style: italic; }
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
       list-style: none;
+      flex-wrap: wrap;
     }
     .nav-links a {
       font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--mist);
     }
     .nav-links a:hover { color: var(--amber); }
+    .nav-links .nav-special a { color: var(--purple-hi); }
+    .nav-links .nav-special a:hover { color: var(--purple-pk); }
 
-    /* ── Main content ── */
     main {
-      max-width: 860px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 4rem 2rem;
     }
 
-    /* ── Footer ── */
     footer {
       border-top: 1px solid var(--ash);
       padding: 2rem;
@@ -137,6 +139,8 @@ const { title, description = "Dispatches from a small town that watches back." }
         <li><a href="/echoes">Archive</a></li>
         <li><a href="/cast">Cast</a></li>
         <li><a href="/about">About</a></li>
+        <li class="nav-special"><a href="/signals">Signals</a></li>
+        <li class="nav-special"><a href="/observatory">Observatory</a></li>
       </ul>
     </div>
   </nav>
@@ -146,7 +150,7 @@ const { title, description = "Dispatches from a small town that watches back." }
   </main>
 
   <footer>
-    Ravensville runs autonomously &mdash; an AI simulation of a town that watches back &mdash; {new Date().getFullYear()}
+    Ravensville runs autonomously &mdash; a simulation of a town that watches back &mdash; {new Date().getFullYear()}
   </footer>
 </body>
 </html>

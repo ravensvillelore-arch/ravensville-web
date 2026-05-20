@@ -1,0 +1,445 @@
+---
+import Base from '../layouts/Base.astro';
+
+// Analytics data — updated weekly by analytics.py
+// Current data from Days 6-9 (Days 1-5 unreliable due to early API issues)
+
+const simStart = "May 2026";
+const currentDay = 9;
+const currentSeason = "Autumn";
+
+const dayData = [
+  { day: 6, ticks: 24, scenes: 12, solos: 46 },
+  { day: 7, ticks: 24, scenes: 15, solos: 39 },
+  { day: 8, ticks: 24, scenes: 14, solos: 41 },
+  { day: 9, ticks: 15, scenes: 14, solos: 20 },
+];
+
+const totalScenes = dayData.reduce((a, d) => a + d.scenes, 0);
+const totalSolos  = dayData.reduce((a, d) => a + d.solos, 0);
+const totalTicks  = dayData.reduce((a, d) => a + d.ticks, 0);
+const overallRatio = Math.round(totalScenes / (totalScenes + totalSolos) * 100);
+
+const topPairs = [
+  { a: "Sister Lila", b: "Sophie Laurent", count: 7 },
+  { a: "Dr. Julian Hale", b: "Mace MacAllister", count: 7 },
+  { a: "Dr. Julian Hale", b: "Link Brooks", count: 6 },
+  { a: "Link Brooks", b: "Mace MacAllister", count: 6 },
+  { a: "Dr. Julian Hale", b: "Mia Thompson", count: 6 },
+  { a: "Dr. Ellie Vance", b: "Jeffrey Goines", count: 6 },
+  { a: "Mace MacAllister", b: "Sister Lila", count: 5 },
+  { a: "Dr. Julian Hale", b: "Sophie Laurent", count: 4 },
+  { a: "Mia Thompson", b: "Sophie Laurent", count: 4 },
+  { a: "Link Brooks", b: "Mia Thompson", count: 3 },
+];
+
+const locationData = [
+  { name: "town-square", scenes: 26 },
+  { name: "twisted-olive", scenes: 14 },
+  { name: "brewsome", scenes: 13 },
+  { name: "vance-therapy", scenes: 3 },
+  { name: "the-park", scenes: 2 },
+];
+const maxLocationScenes = Math.max(...locationData.map(l => l.scenes));
+const maxDayScenes = Math.max(...dayData.map(d => d.scenes + d.solos));
+---
+<Base title="Observatory" description="The data layer underneath Ravensville — scene analytics, character patterns, simulation health.">
+  <style>
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--purple-hi);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--paper);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+    .lead {
+      font-size: 1rem;
+      color: var(--mist);
+      line-height: 1.8;
+      margin-bottom: 3rem;
+      font-style: italic;
+    }
+
+    /* Section nav */
+    .section-nav {
+      position: sticky;
+      top: 65px;
+      background: rgba(10,9,8,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--smoke);
+      padding: 0.75rem 0;
+      margin: 0 -2rem 3rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      z-index: 50;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .section-nav a {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mist);
+      padding-bottom: 0.2rem;
+    }
+    .section-nav a:hover { color: var(--purple-hi); border-bottom: 1px solid var(--purple-hi); }
+
+    /* Section headers */
+    .section {
+      margin-bottom: 5rem;
+      scroll-margin-top: 120px;
+    }
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--paper);
+      margin-bottom: 0.5rem;
+    }
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--purple-lo);
+      margin-bottom: 2rem;
+    }
+
+    /* Overview stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1px;
+      background: var(--ash);
+      margin-bottom: 2rem;
+    }
+    .stat {
+      background: var(--fog);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .stat-value {
+      font-family: var(--mono);
+      font-size: 2rem;
+      color: var(--purple-hi);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mist);
+    }
+    .note {
+      font-size: 0.85rem;
+      color: var(--mist);
+      font-style: italic;
+      margin-top: 1rem;
+    }
+
+    /* Scene ratio chart */
+    .ratio-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .ratio-row {
+      display: grid;
+      grid-template-columns: 60px 1fr 60px;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .ratio-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--mist);
+      text-align: right;
+    }
+    .ratio-bar-track {
+      background: var(--smoke);
+      height: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .ratio-bar-scene {
+      background: var(--purple-hi);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: white;
+      white-space: nowrap;
+      transition: width 0.3s;
+    }
+    .ratio-bar-solo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background: var(--smoke);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: var(--mist);
+    }
+    .ratio-pct {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--purple-hi);
+    }
+    .target-line {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--mist);
+      margin-top: 0.5rem;
+      padding-left: 68px;
+    }
+
+    /* Pairs table */
+    .pairs-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .pairs-table th {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mist);
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--ash);
+    }
+    .pairs-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--smoke);
+      font-size: 0.95rem;
+      color: var(--pale);
+    }
+    .pairs-table tr:hover td { background: rgba(45,27,78,0.15); }
+    .pair-count {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--purple-hi);
+      font-weight: bold;
+    }
+    .pair-bar {
+      display: inline-block;
+      height: 8px;
+      background: var(--purple-mid);
+      vertical-align: middle;
+      margin-left: 0.5rem;
+      border-radius: 2px;
+    }
+
+    /* Location bars */
+    .location-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .loc-row {
+      display: grid;
+      grid-template-columns: 140px 1fr 40px;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .loc-name {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--pale);
+      text-align: right;
+    }
+    .loc-track {
+      background: var(--smoke);
+      height: 24px;
+      position: relative;
+    }
+    .loc-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--purple-lo), var(--purple-hi));
+    }
+    .loc-count {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--purple-hi);
+    }
+
+    .update-note {
+      margin-top: 4rem;
+      padding: 1.5rem;
+      border: 1px solid var(--smoke);
+      background: rgba(26,24,20,0.4);
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--mist);
+      letter-spacing: 0.08em;
+      line-height: 1.8;
+    }
+  </style>
+
+  <span class="eyebrow">Simulation Analytics</span>
+  <h1>The Observatory</h1>
+  <p class="lead">
+    The data layer underneath Ravensville. Scene density, character pair dynamics, location activity — the structural health of an autonomous town. Updated as the simulation accumulates history.
+  </p>
+
+  <nav class="section-nav">
+    <a href="#overview">Overview</a>
+    <a href="#scene-ratio">Scene Ratio</a>
+    <a href="#pairs">Character Pairs</a>
+    <a href="#locations">Locations</a>
+  </nav>
+
+  <!-- OVERVIEW -->
+  <section class="section" id="overview">
+    <h2>Overview</h2>
+    <hr class="section-rule" />
+
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="stat-value">{currentDay}</span>
+        <span class="stat-label">Simulated Days</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">{totalTicks}</span>
+        <span class="stat-label">Total Ticks</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">{totalScenes}</span>
+        <span class="stat-label">Scenes</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">{totalSolos}</span>
+        <span class="stat-label">Solo Moments</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">{overallRatio}%</span>
+        <span class="stat-label">Scene Ratio</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">{currentSeason}</span>
+        <span class="stat-label">Current Season</span>
+      </div>
+    </div>
+
+    <p class="note">
+      Data shown from Day 6 onwards. Days 1-5 excluded — early API quota issues caused characters to be silently skipped, making those numbers unreliable. Day 9 reflects the first day of the new simulation timing (8 characters active every tick, hourly ticks with sleep window).
+    </p>
+  </section>
+
+  <!-- SCENE RATIO -->
+  <section class="section" id="scene-ratio">
+    <h2>Scene Ratio</h2>
+    <hr class="section-rule" />
+    <p style="color: var(--pale); font-size: 0.95rem; margin-bottom: 1.5rem;">
+      A scene happens when two or more characters are in the same location at the same tick. Solo moments are single characters posting alone. The ratio measures how much of the simulation is interaction versus monologue. Target is 50-60%.
+    </p>
+
+    <div class="ratio-chart">
+      {dayData.map(d => {
+        const total = d.scenes + d.solos;
+        const scenePct = Math.round(d.scenes / total * 100);
+        const soloPct = 100 - scenePct;
+        return (
+          <div class="ratio-row">
+            <span class="ratio-label">Day {d.day}</span>
+            <div class="ratio-bar-track">
+              <div class="ratio-bar-scene" style={`width: ${scenePct}%`}>
+                {scenePct > 15 ? `${d.scenes} scenes` : ''}
+              </div>
+              <div class="ratio-bar-solo" style={`width: ${soloPct}%`}>
+                {soloPct > 15 ? `${d.solos} solo` : ''}
+              </div>
+            </div>
+            <span class="ratio-pct">{scenePct}%</span>
+          </div>
+        );
+      })}
+    </div>
+    <p class="target-line">Target: 50% &mdash; Day 9 reached 41% on first day of new timing</p>
+  </section>
+
+  <!-- CHARACTER PAIRS -->
+  <section class="section" id="pairs">
+    <h2>Character Pairs</h2>
+    <hr class="section-rule" />
+    <p style="color: var(--pale); font-size: 0.95rem; margin-bottom: 1.5rem;">
+      Which characters share scenes most often. A social map of Ravensville — who gravitates toward whom, who avoids whom, who is everyone's neighbor.
+    </p>
+
+    <table class="pairs-table">
+      <thead>
+        <tr>
+          <th>Pair</th>
+          <th>Scenes</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {topPairs.map(pair => (
+          <tr>
+            <td>{pair.a} &amp; {pair.b}</td>
+            <td><span class="pair-count">{pair.count}</span></td>
+            <td>
+              <span
+                class="pair-bar"
+                style={`width: ${Math.round(pair.count / topPairs[0].count * 80)}px`}
+              ></span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p class="note">Dr. Julian Hale appears in 4 of the top 5 pairs — the most socially active character. Sister Lila and Sophie Laurent lead all pairs with 7 shared scenes.</p>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section class="section" id="locations">
+    <h2>Location Activity</h2>
+    <hr class="section-rule" />
+    <p style="color: var(--pale); font-size: 0.95rem; margin-bottom: 1.5rem;">
+      Where scenes happen. Town square dominates as the crossroads everyone passes through. The Twisted Olive and Brewsome are the evening and morning hubs. Vance Therapy and the Park are intentionally quiet — their scenes are rarer but carry more weight.
+    </p>
+
+    <div class="location-bars">
+      {locationData.map(loc => (
+        <div class="loc-row">
+          <span class="loc-name">#{loc.name}</span>
+          <div class="loc-track">
+            <div
+              class="loc-fill"
+              style={`width: ${Math.round(loc.scenes / maxLocationScenes * 100)}%`}
+            ></div>
+          </div>
+          <span class="loc-count">{loc.scenes}</span>
+        </div>
+      ))}
+    </div>
+    <p class="note">Roaming schedules updated May 20 to reflect natural human patterns — morning park walks, office hours at Vance Therapy, evening convergence at the Twisted Olive. Rerun after Day 12+ to see the shift.</p>
+  </section>
+
+  <div class="update-note">
+    Observatory v1 &mdash; {currentSeason}, Day {currentDay} &mdash; Data from Days 6-9<br/>
+    The heatmap, entropy tracking, and topic analysis are coming as the simulation accumulates history.<br/>
+    Analytics run weekly. Next update after Day 14.
+  </div>
+</Base>

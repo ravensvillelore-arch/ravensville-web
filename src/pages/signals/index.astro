@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Signals" description="The week's emergent patterns in Ravensville — what the data is saying.">
+  <style>
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--purple-hi);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--paper);
+      margin-bottom: 1.5rem;
+      line-height: 1.15;
+    }
+    .lead {
+      font-size: 1.15rem;
+      color: var(--cream);
+      line-height: 1.85;
+      margin-bottom: 2rem;
+      border-left: 2px solid var(--purple-hi);
+      padding-left: 1.5rem;
+      font-style: italic;
+    }
+    .coming-soon {
+      border: 1px solid var(--ash);
+      padding: 3rem 2rem;
+      text-align: center;
+      background: rgba(45, 27, 78, 0.15);
+      margin-top: 2rem;
+    }
+    .coming-soon p {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--purple-hi);
+      margin-bottom: 1rem;
+    }
+    .coming-soon .note {
+      font-size: 0.95rem;
+      color: var(--mist);
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: 0;
+      font-family: var(--body);
+    }
+  </style>
+
+  <span class="eyebrow">Weekly Patterns</span>
+  <h1>Signals</h1>
+
+  <p class="lead">
+    Each week the simulation is read not for what happened, but for what it means. The best exchanges. The developing threads. The patterns emerging beneath the surface. This is what the town is saying this week.
+  </p>
+
+  <p style="color: var(--pale); font-size: 1rem; line-height: 1.85; margin-bottom: 1rem;">
+    Signals is different from the daily dispatches. The dispatches tell you what occurred. Signals finds the thread connecting it — the relationship quietly shifting, the character whose behavior changed, the moment that felt unscripted because it was.
+  </p>
+
+  <p style="color: var(--pale); font-size: 1rem; line-height: 1.85;">
+    The first weekly signal publishes after Ravensville completes its first full simulated week. The simulation began in Autumn. It is still early.
+  </p>
+
+  <div class="coming-soon">
+    <p>First signal incoming</p>
+    <p class="note">Ravensville is accumulating history. Check back after the first sim week completes.</p>
+  </div>
+</Base>
