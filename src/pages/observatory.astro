@@ -1,47 +1,26 @@
 ---
 import Base from '../layouts/Base.astro';
 
-// Analytics data — updated weekly by analytics.py
-// Current data from Days 6-9 (Days 1-5 unreliable due to early API issues)
+// Analytics data — updated daily by observatory_metadata_extractor
+// Current data from Days 6-11 (Days 1-5 unreliable due to early API issues)
 
-const simStart = "May 2026";
-const currentDay = 9;
-const currentSeason = "Autumn";
+// Import dynamic data from simulation metadata
+const observatoryData = await fetch('/observatory-data.json').then(r => r.json());
 
-const dayData = [
-  { day: 6, ticks: 24, scenes: 12, solos: 46 },
-  { day: 7, ticks: 24, scenes: 15, solos: 39 },
-  { day: 8, ticks: 24, scenes: 14, solos: 41 },
-  { day: 9, ticks: 15, scenes: 14, solos: 20 },
-];
+const simStart = observatoryData.simStart;
+const currentDay = observatoryData.currentDay;
+const currentSeason = observatoryData.currentSeason;
 
-const totalScenes = dayData.reduce((a, d) => a + d.scenes, 0);
-const totalSolos  = dayData.reduce((a, d) => a + d.solos, 0);
-const totalTicks  = dayData.reduce((a, d) => a + d.ticks, 0);
-const overallRatio = Math.round(totalScenes / (totalScenes + totalSolos) * 100);
+const dayData = observatoryData.dayData;
+const totalScenes = observatoryData.totalScenes;
+const totalSolos = observatoryData.totalSolos;
+const totalTicks = observatoryData.totalTicks;
+const overallRatio = observatoryData.overallRatio;
 
-const topPairs = [
-  { a: "Sister Lila", b: "Sophie Laurent", count: 7 },
-  { a: "Dr. Julian Hale", b: "Mace MacAllister", count: 7 },
-  { a: "Dr. Julian Hale", b: "Link Brooks", count: 6 },
-  { a: "Link Brooks", b: "Mace MacAllister", count: 6 },
-  { a: "Dr. Julian Hale", b: "Mia Thompson", count: 6 },
-  { a: "Dr. Ellie Vance", b: "Jeffrey Goines", count: 6 },
-  { a: "Mace MacAllister", b: "Sister Lila", count: 5 },
-  { a: "Dr. Julian Hale", b: "Sophie Laurent", count: 4 },
-  { a: "Mia Thompson", b: "Sophie Laurent", count: 4 },
-  { a: "Link Brooks", b: "Mia Thompson", count: 3 },
-];
-
-const locationData = [
-  { name: "town-square", scenes: 26 },
-  { name: "twisted-olive", scenes: 14 },
-  { name: "brewsome", scenes: 13 },
-  { name: "vance-therapy", scenes: 3 },
-  { name: "the-park", scenes: 2 },
-];
-const maxLocationScenes = Math.max(...locationData.map(l => l.scenes));
-const maxDayScenes = Math.max(...dayData.map(d => d.scenes + d.solos));
+const topPairs = observatoryData.topPairs;
+const locationData = observatoryData.locationData;
+const maxLocationScenes = observatoryData.maxLocationScenes;
+const maxDayScenes = observatoryData.maxDayScenes;
 ---
 <Base title="Observatory" description="The data layer underneath Ravensville — scene analytics, character patterns, simulation health.">
   <style>
@@ -356,21 +335,18 @@ const maxDayScenes = Math.max(...dayData.map(d => d.scenes + d.solos));
 
     <div class="ratio-chart">
       {dayData.map(d => {
-        const total = d.scenes + d.solos;
-        const scenePct = Math.round(d.scenes / total * 100);
-        const soloPct = 100 - scenePct;
         return (
           <div class="ratio-row">
             <span class="ratio-label">Day {d.day}</span>
             <div class="ratio-bar-track">
-              <div class="ratio-bar-scene" style={`width: ${scenePct}%`}>
-                {scenePct > 15 ? `${d.scenes} scenes` : ''}
+              <div class="ratio-bar-scene" style={`width: ${d.scene_pct}%`}>
+                {d.scene_pct > 15 ? `${d.scenes} scenes` : ''}
               </div>
-              <div class="ratio-bar-solo" style={`width: ${soloPct}%`}>
-                {soloPct > 15 ? `${d.solos} solo` : ''}
+              <div class="ratio-bar-solo" style={`width: ${100 - d.scene_pct}%`}>
+                {100 - d.scene_pct > 15 ? `${d.solos} solo` : ''}
               </div>
             </div>
-            <span class="ratio-pct">{scenePct}%</span>
+            <span class="ratio-pct">{d.scene_pct}%</span>
           </div>
         );
       })}
@@ -438,8 +414,8 @@ const maxDayScenes = Math.max(...dayData.map(d => d.scenes + d.solos));
   </section>
 
   <div class="update-note">
-    Observatory v1 &mdash; {currentSeason}, Day {currentDay} &mdash; Data from Days 6-9<br/>
+    Observatory v1 — {currentSeason}, Day {currentDay} — Data from Days 6-{currentDay}<br/>
     The heatmap, entropy tracking, and topic analysis are coming as the simulation accumulates history.<br/>
-    Analytics run weekly. Next update after Day 14.
+    Analytics run daily. Next update after Day {currentDay + 1}.
   </div>
 </Base>
