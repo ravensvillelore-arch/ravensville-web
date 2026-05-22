@@ -1,12 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import fs from 'fs';
-import path from 'path';
-
-// Read observatory data from disk at build time
-const observatoryData = JSON.parse(
-  fs.readFileSync(path.join(process.cwd(), 'public', 'observatory-data.json'), 'utf-8')
-);
+import observatoryData from '../data/observatory-data.json';
 
 const simStart = observatoryData.simStart;
 const currentDay = observatoryData.currentDay;
