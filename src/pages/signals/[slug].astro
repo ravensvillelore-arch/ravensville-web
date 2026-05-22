@@ -1,0 +1,461 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const signals = await getCollection('signals');
+  return signals.map(signal => ({
+    params: { slug: signal.id },
+    props: { signal },
+  }));
+}
+
+const { signal } = Astro.props;
+const d = signal.data;
+const dayRange = `Days ${d.days[0]}–${d.days[d.days.length - 1]}`;
+---
+<Base title={`Signals: Week ${d.week} — ${d.title}`} description={d.summary}>
+  <style>
+    /* Nav back */
+    .back {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mist);
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+    .back:hover { color: var(--amber); }
+
+    /* Header */
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--paper);
+      line-height: 1.15;
+      margin-bottom: 2rem;
+    }
+
+    /* Header strip */
+    .header-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border: 1px solid var(--ash);
+      border-left: 3px solid var(--amber);
+      margin-bottom: 3rem;
+      background: rgba(26,24,20,0.5);
+    }
+    .strip-item {
+      flex: 1 1 auto;
+      padding: 0.9rem 1.25rem;
+      border-right: 1px solid var(--ash);
+      min-width: 80px;
+    }
+    .strip-item:last-child { border-right: none; }
+    .strip-label {
+      font-family: var(--mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mist);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .strip-value {
+      font-family: var(--mono);
+      font-size: 1rem;
+      color: var(--cream);
+      font-weight: 400;
+    }
+
+    /* Section chrome */
+    .section {
+      margin-bottom: 3.5rem;
+    }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mist);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--smoke);
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--smoke);
+      display: none;
+    }
+    .section-num {
+      color: var(--ash);
+      margin-right: 0.25rem;
+    }
+
+    /* Section 1 - Town paragraph */
+    .town-paragraph {
+      font-size: 1.15rem;
+      color: var(--cream);
+      line-height: 1.9;
+      font-style: italic;
+      border-left: 2px solid var(--amber);
+      padding-left: 1.5rem;
+    }
+
+    /* Section 2 - Notable events */
+    .event-list { list-style: none; }
+    .event-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--smoke);
+    }
+    .event-item:last-child { border-bottom: none; }
+    .event-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--paper);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    .event-body {
+      font-size: 0.95rem;
+      color: var(--pale);
+      line-height: 1.8;
+    }
+
+    /* Section 3 - Vitals */
+    .vitals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1px;
+      background: var(--ash);
+      border: 1px solid var(--ash);
+    }
+    .vital-card {
+      background: var(--fog);
+      padding: 1.25rem 1.5rem;
+    }
+    .vital-label {
+      font-family: var(--mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mist);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .vital-value {
+      font-family: var(--mono);
+      font-size: 1rem;
+      color: var(--amber);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .vital-sub {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--mist);
+    }
+
+    /* Section 4 - Character pulse */
+    .pulse-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .pulse-table th {
+      font-family: var(--mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mist);
+      text-align: left;
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--ash);
+      font-weight: 400;
+    }
+    .pulse-table td {
+      padding: 0.85rem 0.75rem;
+      border-bottom: 1px solid var(--smoke);
+      vertical-align: top;
+      color: var(--pale);
+      line-height: 1.5;
+    }
+    .pulse-table tr:last-child td { border-bottom: none; }
+    .pulse-char {
+      font-family: var(--serif);
+      color: var(--cream);
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+    .pulse-scenes {
+      font-family: var(--mono);
+      color: var(--amber);
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    .pulse-watch {
+      font-style: italic;
+      color: var(--mist);
+      font-size: 0.85rem;
+    }
+    @media (max-width: 640px) {
+      .pulse-table .hide-mobile { display: none; }
+    }
+
+    /* Section 5 - Emergent behaviors */
+    .behavior-list { list-style: none; }
+    .behavior-item {
+      border: 1px solid var(--ash);
+      border-left: 3px solid var(--purple-hi);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      background: rgba(26,24,20,0.5);
+    }
+    .behavior-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--purple-hi);
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    .behavior-body {
+      font-size: 0.95rem;
+      color: var(--pale);
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+    .behavior-excerpt {
+      margin-top: 0.9rem;
+      padding: 0.75rem 1rem;
+      background: rgba(45, 27, 78, 0.2);
+      border-left: 2px solid var(--purple-mid);
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--cream);
+      line-height: 1.65;
+    }
+
+    /* Section 6 - Methodology */
+    details {
+      border: 1px solid var(--smoke);
+      background: rgba(26,24,20,0.3);
+    }
+    summary {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mist);
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::before {
+      content: '▶';
+      font-size: 0.5rem;
+      transition: transform 0.2s;
+    }
+    details[open] summary::before { transform: rotate(90deg); }
+    .method-body {
+      padding: 1.25rem 1.5rem;
+      border-top: 1px solid var(--smoke);
+    }
+    .method-body p {
+      font-size: 0.85rem;
+      color: var(--mist);
+      line-height: 1.8;
+      margin-bottom: 0.75rem;
+    }
+    .method-body p:last-child { margin-bottom: 0; }
+
+    /* Section 7 - Open questions */
+    .questions-list { list-style: none; counter-reset: questions; }
+    .question-item {
+      counter-increment: questions;
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--smoke);
+    }
+    .question-item:last-child { border-bottom: none; }
+    .question-item::before {
+      content: counter(questions);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--ash);
+      padding-top: 0.2rem;
+    }
+    .question-text {
+      font-size: 1rem;
+      color: var(--pale);
+      line-height: 1.8;
+      font-style: italic;
+    }
+  </style>
+
+  <a href="/signals" class="back">&larr; All signals</a>
+
+  <span class="eyebrow">Signals &mdash; Week {d.week} &mdash; {d.season}, {dayRange}</span>
+  <h1>{d.title}</h1>
+
+  <!-- Header strip -->
+  <div class="header-strip">
+    <div class="strip-item">
+      <span class="strip-label">Characters</span>
+      <span class="strip-value">{d.header.characters}</span>
+    </div>
+    <div class="strip-item">
+      <span class="strip-label">Scenes</span>
+      <span class="strip-value">{d.header.scenes}</span>
+    </div>
+    <div class="strip-item">
+      <span class="strip-label">Solo moments</span>
+      <span class="strip-value">{d.header.solos}</span>
+    </div>
+    <div class="strip-item">
+      <span class="strip-label">Unique pairs</span>
+      <span class="strip-value">{d.header.pairs}</span>
+    </div>
+    <div class="strip-item">
+      <span class="strip-label">New meetings</span>
+      <span class="strip-value">{d.header.first_occurrences}</span>
+    </div>
+  </div>
+
+  <!-- Section 1: The Town in One Paragraph -->
+  <div class="section">
+    <div class="section-label"><span class="section-num">01</span> The Town This Week</div>
+    <p class="town-paragraph">{d.town_paragraph}</p>
+  </div>
+
+  <!-- Section 2: Notable Events -->
+  <div class="section">
+    <div class="section-label"><span class="section-num">02</span> Notable Events</div>
+    <ul class="event-list">
+      {d.notable_events.map(event => (
+        <li class="event-item">
+          <p class="event-title">{event.title}</p>
+          <p class="event-body">{event.body}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <!-- Section 3: Town Vital Signs -->
+  <div class="section">
+    <div class="section-label"><span class="section-num">03</span> Town Vital Signs</div>
+    <div class="vitals-grid">
+      <div class="vital-card">
+        <span class="vital-label">Scene ratio</span>
+        <span class="vital-value">{d.vitals.scene_ratio}</span>
+        <span class="vital-sub">{d.vitals.scene_ratio_trend}</span>
+      </div>
+      <div class="vital-card">
+        <span class="vital-label">Top location</span>
+        <span class="vital-value" style="font-size:0.85rem">{d.vitals.top_location}</span>
+      </div>
+      <div class="vital-card">
+        <span class="vital-label">Dominant pair</span>
+        <span class="vital-value" style="font-size:0.85rem">{d.vitals.dominant_pair}</span>
+      </div>
+      <div class="vital-card">
+        <span class="vital-label">Unique pairs</span>
+        <span class="vital-value">{d.vitals.total_pairs}</span>
+        <span class="vital-sub">of {d.header.characters * (d.header.characters - 1) / 2} possible</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4: Character Pulse -->
+  <div class="section">
+    <div class="section-label"><span class="section-num">04</span> Character Pulse</div>
+    <table class="pulse-table">
+      <thead>
+        <tr>
+          <th>Character</th>
+          <th>Scenes</th>
+          <th class="hide-mobile">Home base</th>
+          <th class="hide-mobile">Top partner</th>
+          <th>Watch</th>
+        </tr>
+      </thead>
+      <tbody>
+        {d.character_pulse.map(char => (
+          <tr>
+            <td class="pulse-char">{char.character}</td>
+            <td class="pulse-scenes">{char.scenes}</td>
+            <td class="hide-mobile">{char.top_location}</td>
+            <td class="hide-mobile">{char.top_partner}</td>
+            <td class="pulse-watch">{char.watch_note}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Section 5: Detected Emergent Behaviors -->
+  <div class="section">
+    <div class="section-label"><span class="section-num">05</span> Detected Emergent Behaviors</div>
+    <ul class="behavior-list">
+      {d.emergent_behaviors.map(b => (
+        <li class="behavior-item">
+          <span class="behavior-label">{b.label}</span>
+          <p class="behavior-body">{b.body}</p>
+          {b.excerpt && (
+            <p class="behavior-excerpt">"{b.excerpt}"</p>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <!-- Section 6: Methodology -->
+  <div class="section">
+    <details>
+      <summary><span class="section-num">06</span> Methodology</summary>
+      <div class="method-body">
+        <p>Signals is produced from raw simulation metadata captured at each hourly tick. Each tick records character locations, scenes (multi-character exchanges), solo moments (single-character internal actions), first-occurrence pair meetings, and relationship signals when declared by the simulation.</p>
+        <p>Week 1 covers Days 6–11. Days 1–5 are excluded: early API rate-limiting during initial configuration caused Gemini quota failures that degraded character output quality during that period. Day 6 onward reflects clean, reliable simulation data.</p>
+        <p>Scene ratio is calculated as scenes / (scenes + solo moments) per tick aggregated across the reporting window. Character pair counts include all participants in multi-character scenes. Emergent behavior labels are editorial interpretations of quantitative patterns — they reflect what the data suggests, not what was designed.</p>
+        <p>Signals v0.1 — no vocabulary fingerprint, no co_present field, no relationship scoring. These will be added as the simulation infrastructure matures.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Section 7: Open Questions -->
+  <div class="section">
+    <div class="section-label"><span class="section-num">07</span> Open Questions</div>
+    <ul class="questions-list">
+      {d.open_questions.map(q => (
+        <li class="question-item">
+          <span></span>
+          <p class="question-text">{q}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>

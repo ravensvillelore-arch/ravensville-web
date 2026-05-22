@@ -1,7 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const signals = await getCollection('signals');
+const sorted = signals.sort((a, b) => b.data.week - a.data.week);
+const hasSignals = sorted.length > 0;
 ---
-<Base title="Signals" description="The week's emerging patterns in Ravensville — what the town is saying.">
+<Base title="Signals" description="Weekly pattern analysis from the Ravensville simulation — what the town is saying beneath the surface.">
   <style>
     .eyebrow {
       font-family: var(--mono);
@@ -35,6 +40,50 @@ import Base from '../../layouts/Base.astro';
       line-height: 1.85;
       margin-bottom: 1.25rem;
     }
+
+    /* Signal list */
+    .signal-list { list-style: none; margin-top: 3rem; }
+    .signal-item {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 1.5rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--smoke);
+      align-items: start;
+    }
+    .signal-week {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--mist);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding-top: 0.3rem;
+      line-height: 1.6;
+    }
+    .signal-title {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--cream);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .signal-title:hover { color: var(--amber); }
+    .signal-summary {
+      font-size: 0.9rem;
+      color: var(--mist);
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .signal-stats {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: var(--ash);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.75rem;
+    }
+
+    /* Coming soon */
     .coming-soon {
       border: 1px solid var(--ash);
       padding: 3rem 2rem;
@@ -71,12 +120,29 @@ import Base from '../../layouts/Base.astro';
     Signals is different from the daily dispatches. The dispatches tell you what occurred. Signals finds the thread connecting it — the relationship quietly shifting, the character whose behavior changed, the moment that felt unscripted because it was.
   </p>
 
-  <p>
-    The first weekly signal publishes after Ravensville completes its first full simulated week. The simulation began in Autumn. It is still early.
-  </p>
-
-  <div class="coming-soon">
-    <p>First signal incoming</p>
-    <p class="note">Ravensville is accumulating history. Check back after the first sim week completes.</p>
-  </div>
+  {hasSignals ? (
+    <ul class="signal-list">
+      {sorted.map(signal => (
+        <li class="signal-item">
+          <span class="signal-week">
+            {signal.data.season}<br/>
+            Week {signal.data.week}<br/>
+            Days {signal.data.days[0]}–{signal.data.days[signal.data.days.length - 1]}
+          </span>
+          <div>
+            <a href={`/signals/${signal.id}`} class="signal-title">{signal.data.title}</a>
+            {signal.data.summary && <p class="signal-summary">{signal.data.summary}</p>}
+            <p class="signal-stats">
+              {signal.data.header.scenes} scenes &middot; {signal.data.header.pairs} pairs &middot; {signal.data.header.characters} characters
+            </p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <div class="coming-soon">
+      <p>First signal incoming</p>
+      <p class="note">Ravensville is accumulating history. Check back after the first sim week completes.</p>
+    </div>
+  )}
 </Base>
