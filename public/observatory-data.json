@@ -52,53 +52,53 @@
   "overallRatio": 38,
   "topPairs": [
     {
-      "a": "julian_hale",
-      "b": "mace_macallister",
+      "a": "Dr. Julian Hale",
+      "b": "Mace MacAllister",
       "count": 19
     },
     {
-      "a": "jeffrey_goines",
-      "b": "mace_macallister",
+      "a": "Jeffrey Goines",
+      "b": "Mace MacAllister",
       "count": 18
     },
     {
-      "a": "julian_hale",
-      "b": "sister_lila_voss",
+      "a": "Dr. Julian Hale",
+      "b": "Sister Lila",
       "count": 18
     },
     {
-      "a": "julian_hale",
-      "b": "link_brooks",
+      "a": "Dr. Julian Hale",
+      "b": "Link Brooks",
       "count": 14
     },
     {
-      "a": "julian_hale",
-      "b": "mia_thompson",
+      "a": "Dr. Julian Hale",
+      "b": "Mia Thompson",
       "count": 13
     },
     {
-      "a": "link_brooks",
-      "b": "mia_thompson",
+      "a": "Link Brooks",
+      "b": "Mia Thompson",
       "count": 12
     },
     {
-      "a": "ellie_vance",
-      "b": "link_brooks",
+      "a": "Dr. Ellie Vance",
+      "b": "Link Brooks",
       "count": 12
     },
     {
-      "a": "mace_macallister",
-      "b": "sister_lila_voss",
+      "a": "Mace MacAllister",
+      "b": "Sister Lila",
       "count": 12
     },
     {
-      "a": "julian_hale",
-      "b": "sophie_laurent",
+      "a": "Dr. Julian Hale",
+      "b": "Sophie Laurent",
       "count": 11
     },
     {
-      "a": "mace_macallister",
-      "b": "mia_thompson",
+      "a": "Mace MacAllister",
+      "b": "Mia Thompson",
       "count": 11
     }
   ],
