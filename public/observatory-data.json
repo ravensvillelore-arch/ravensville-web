@@ -1,0 +1,129 @@
+{
+  "simStart": "May 2026",
+  "currentDay": 11,
+  "currentSeason": "Autumn",
+  "dayData": [
+    {
+      "day": 6,
+      "ticks": 24,
+      "scenes": 12,
+      "solos": 46,
+      "scene_pct": 21
+    },
+    {
+      "day": 7,
+      "ticks": 24,
+      "scenes": 15,
+      "solos": 39,
+      "scene_pct": 28
+    },
+    {
+      "day": 8,
+      "ticks": 24,
+      "scenes": 14,
+      "solos": 41,
+      "scene_pct": 25
+    },
+    {
+      "day": 9,
+      "ticks": 21,
+      "scenes": 25,
+      "solos": 30,
+      "scene_pct": 45
+    },
+    {
+      "day": 10,
+      "ticks": 16,
+      "scenes": 35,
+      "solos": 25,
+      "scene_pct": 58
+    },
+    {
+      "day": 11,
+      "ticks": 5,
+      "scenes": 14,
+      "solos": 6,
+      "scene_pct": 70
+    }
+  ],
+  "totalScenes": 115,
+  "totalSolos": 187,
+  "totalTicks": 114,
+  "overallRatio": 38,
+  "topPairs": [
+    {
+      "a": "julian_hale",
+      "b": "mace_macallister",
+      "count": 19
+    },
+    {
+      "a": "jeffrey_goines",
+      "b": "mace_macallister",
+      "count": 18
+    },
+    {
+      "a": "julian_hale",
+      "b": "sister_lila_voss",
+      "count": 18
+    },
+    {
+      "a": "julian_hale",
+      "b": "link_brooks",
+      "count": 14
+    },
+    {
+      "a": "julian_hale",
+      "b": "mia_thompson",
+      "count": 13
+    },
+    {
+      "a": "link_brooks",
+      "b": "mia_thompson",
+      "count": 12
+    },
+    {
+      "a": "ellie_vance",
+      "b": "link_brooks",
+      "count": 12
+    },
+    {
+      "a": "mace_macallister",
+      "b": "sister_lila_voss",
+      "count": 12
+    },
+    {
+      "a": "julian_hale",
+      "b": "sophie_laurent",
+      "count": 11
+    },
+    {
+      "a": "mace_macallister",
+      "b": "mia_thompson",
+      "count": 11
+    }
+  ],
+  "locationData": [
+    {
+      "name": "town-square",
+      "scenes": 48
+    },
+    {
+      "name": "twisted-olive",
+      "scenes": 29
+    },
+    {
+      "name": "brewsome",
+      "scenes": 26
+    },
+    {
+      "name": "the-park",
+      "scenes": 6
+    },
+    {
+      "name": "vance-therapy",
+      "scenes": 6
+    }
+  ],
+  "maxLocationScenes": 48,
+  "maxDayScenes": 20
+}
