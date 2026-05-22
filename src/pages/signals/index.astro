@@ -4,7 +4,8 @@ import { getCollection } from 'astro:content';
 
 const signals = await getCollection('signals');
 const sorted = signals.sort((a, b) => b.data.week - a.data.week);
-const hasSignals = sorted.length > 0;
+const latest = sorted[0];
+const previous = sorted.slice(1, 4);
 ---
 <Base title="Signals" description="Weekly pattern analysis from the Ravensville simulation — what the town is saying beneath the surface.">
   <style>
@@ -14,73 +15,81 @@ const hasSignals = sorted.length > 0;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--amber);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       display: block;
     }
-    h1 {
+    .hero-title {
       font-family: var(--serif);
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
       font-weight: 700;
-      color: var(--paper);
-      margin-bottom: 1.5rem;
       line-height: 1.15;
+      color: var(--paper);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
     }
-    .lead {
-      font-size: 1.15rem;
+    .hero-summary {
+      font-size: 1.25rem;
       color: var(--cream);
-      line-height: 1.85;
-      margin-bottom: 2rem;
+      line-height: 1.8;
+      font-style: italic;
       border-left: 2px solid var(--amber);
       padding-left: 1.5rem;
-      font-style: italic;
+      margin-bottom: 2rem;
     }
-    p {
-      font-size: 1rem;
-      color: var(--pale);
-      line-height: 1.85;
-      margin-bottom: 1.25rem;
+    .read-more {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border-bottom: 1px solid var(--amber);
+      padding-bottom: 0.1rem;
+      display: inline-block;
+      margin-bottom: 3rem;
     }
-
-    /* Signal list */
-    .signal-list { list-style: none; margin-top: 3rem; }
-    .signal-item {
-      display: grid;
-      grid-template-columns: 90px 1fr;
-      gap: 1.5rem;
-      padding: 2rem 0;
+    .divider {
+      border: none;
+      border-top: 1px solid var(--ash);
+      margin: 3.5rem 0;
+    }
+    .section-header {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mist);
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .section-header a {
+      color: var(--ash);
+      font-size: 0.6rem;
+    }
+    .section-header a:hover { color: var(--amber); }
+    .archive-list { list-style: none; }
+    .archive-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.85rem 0;
       border-bottom: 1px solid var(--smoke);
-      align-items: start;
     }
-    .signal-week {
+    .archive-item:last-child { border-bottom: none; }
+    .archive-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--cream);
+    }
+    .archive-title:hover { color: var(--amber); }
+    .archive-week {
       font-family: var(--mono);
       font-size: 0.65rem;
       color: var(--mist);
       letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding-top: 0.3rem;
-      line-height: 1.6;
-    }
-    .signal-title {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      color: var(--cream);
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    .signal-title:hover { color: var(--amber); }
-    .signal-summary {
-      font-size: 0.9rem;
-      color: var(--mist);
-      font-style: italic;
-      line-height: 1.6;
-    }
-    .signal-stats {
-      font-family: var(--mono);
-      font-size: 0.6rem;
-      color: var(--ash);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-top: 0.75rem;
+      white-space: nowrap;
+      margin-left: 1rem;
     }
 
     /* Coming soon */
@@ -91,7 +100,7 @@ const hasSignals = sorted.length > 0;
       background: rgba(26,24,20,0.4);
       margin-top: 2rem;
     }
-    .coming-soon p {
+    .coming-soon-label {
       font-family: var(--mono);
       font-size: 0.7rem;
       letter-spacing: 0.2em;
@@ -99,50 +108,60 @@ const hasSignals = sorted.length > 0;
       color: var(--amber);
       margin-bottom: 1rem;
     }
-    .coming-soon .note {
+    .coming-soon-note {
       font-size: 0.95rem;
       color: var(--mist);
       font-style: italic;
-      text-transform: none;
-      letter-spacing: 0;
-      font-family: var(--body);
+    }
+    .what-is {
+      font-size: 1rem;
+      color: var(--mist);
+      line-height: 1.9;
+      margin-bottom: 2rem;
     }
   </style>
 
   <span class="eyebrow">Weekly Patterns</span>
-  <h1>Signals</h1>
 
-  <p class="lead">
-    Each week the simulation is read not for what happened, but for what it means. The best exchanges. The developing threads. The patterns emerging beneath the surface. This is what the town is saying this week.
-  </p>
+  {latest ? (
+    <>
+      <span class="eyebrow" style="margin-bottom:0.5rem">
+        Latest signal &mdash; {latest.data.season}, Week {latest.data.week}
+      </span>
+      <h1 class="hero-title">{latest.data.title}</h1>
+      {latest.data.summary && (
+        <p class="hero-summary">{latest.data.summary}</p>
+      )}
+      <a href={`/signals/${latest.id}`} class="read-more">Read full signal &rarr;</a>
 
-  <p>
-    Signals is different from the daily dispatches. The dispatches tell you what occurred. Signals finds the thread connecting it — the relationship quietly shifting, the character whose behavior changed, the moment that felt unscripted because it was.
-  </p>
-
-  {hasSignals ? (
-    <ul class="signal-list">
-      {sorted.map(signal => (
-        <li class="signal-item">
-          <span class="signal-week">
-            {signal.data.season}<br/>
-            Week {signal.data.week}<br/>
-            Days {signal.data.days[0]}–{signal.data.days[signal.data.days.length - 1]}
-          </span>
-          <div>
-            <a href={`/signals/${signal.id}`} class="signal-title">{signal.data.title}</a>
-            {signal.data.summary && <p class="signal-summary">{signal.data.summary}</p>}
-            <p class="signal-stats">
-              {signal.data.header.scenes} scenes &middot; {signal.data.header.pairs} pairs &middot; {signal.data.header.characters} characters
-            </p>
+      {previous.length > 0 && (
+        <>
+          <hr class="divider" />
+          <div class="section-header">
+            <span>Previous signals</span>
+            <a href="/signals/archive">View all &rarr;</a>
           </div>
-        </li>
-      ))}
-    </ul>
+          <ul class="archive-list">
+            {previous.map(signal => (
+              <li class="archive-item">
+                <a href={`/signals/${signal.id}`} class="archive-title">{signal.data.title}</a>
+                <span class="archive-week">{signal.data.season}, Week {signal.data.week}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </>
   ) : (
-    <div class="coming-soon">
-      <p>First signal incoming</p>
-      <p class="note">Ravensville is accumulating history. Check back after the first sim week completes.</p>
-    </div>
+    <>
+      <h1 class="hero-title">Signals</h1>
+      <p class="what-is">
+        Each week the simulation is read not for what happened, but for what it means. The best exchanges. The developing threads. The patterns emerging beneath the surface.
+      </p>
+      <div class="coming-soon">
+        <p class="coming-soon-label">First signal incoming</p>
+        <p class="coming-soon-note">Ravensville is accumulating history. Check back after the first sim week completes.</p>
+      </div>
+    </>
   )}
 </Base>

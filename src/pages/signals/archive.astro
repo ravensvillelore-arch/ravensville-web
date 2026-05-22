@@ -1,0 +1,111 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const signals = await getCollection('signals');
+const sorted = signals.sort((a, b) => b.data.week - a.data.week);
+---
+<Base title="Signals Archive" description="All weekly pattern analyses from the Ravensville simulation.">
+  <style>
+    .back {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mist);
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+    .back:hover { color: var(--amber); }
+    .page-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--paper);
+      margin-bottom: 3rem;
+    }
+    .signal-list { list-style: none; }
+    .signal-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 1.5rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--smoke);
+      align-items: start;
+    }
+    .signal-week {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--mist);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding-top: 0.3rem;
+      line-height: 1.7;
+    }
+    .signal-title {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--cream);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .signal-title:hover { color: var(--amber); }
+    .signal-summary {
+      font-size: 0.9rem;
+      color: var(--mist);
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .signal-stats {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: var(--ash);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.6rem;
+    }
+    .empty {
+      font-size: 1rem;
+      color: var(--mist);
+      font-style: italic;
+      padding: 3rem 0;
+    }
+  </style>
+
+  <a href="/signals" class="back">&larr; Latest signal</a>
+  <span class="page-eyebrow">Signals</span>
+  <h1>All Signals</h1>
+
+  {sorted.length > 0 ? (
+    <ul class="signal-list">
+      {sorted.map(signal => (
+        <li class="signal-item">
+          <span class="signal-week">
+            {signal.data.season}<br/>
+            Week {signal.data.week}<br/>
+            Days {signal.data.days[0]}–{signal.data.days[signal.data.days.length - 1]}
+          </span>
+          <div>
+            <a href={`/signals/${signal.id}`} class="signal-title">{signal.data.title}</a>
+            {signal.data.summary && <p class="signal-summary">{signal.data.summary}</p>}
+            <p class="signal-stats">
+              {signal.data.header.scenes} scenes &middot; {signal.data.header.pairs} pairs &middot; {signal.data.header.characters} characters
+            </p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p class="empty">No signals published yet.</p>
+  )}
+</Base>
