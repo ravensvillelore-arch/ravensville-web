@@ -1,11 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
+import fs from 'fs';
+import path from 'path';
 
-// Analytics data — updated daily by observatory_metadata_extractor
-// Current data from Days 6-11 (Days 1-5 unreliable due to early API issues)
-
-// Import dynamic data from simulation metadata
-const observatoryData = await fetch('/observatory-data.json').then(r => r.json());
+// Read observatory data from disk at build time
+const observatoryData = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), 'public', 'observatory-data.json'), 'utf-8')
+);
 
 const simStart = observatoryData.simStart;
 const currentDay = observatoryData.currentDay;
