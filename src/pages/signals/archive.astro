@@ -98,9 +98,6 @@ const sorted = signals.sort((a, b) => b.data.week - a.data.week);
           <div>
             <a href={`/signals/${signal.id}`} class="signal-title">{signal.data.title}</a>
             {signal.data.summary && <p class="signal-summary">{signal.data.summary}</p>}
-            <p class="signal-stats">
-              {signal.data.header.scenes} scenes &middot; {signal.data.header.pairs} pairs &middot; {signal.data.header.characters} characters
-            </p>
           </div>
         </li>
       ))}

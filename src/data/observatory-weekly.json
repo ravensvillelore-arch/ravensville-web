@@ -1,0 +1,34 @@
+{
+  "weeks": [
+    {
+      "week": 1,
+      "season": "Autumn",
+      "days": [6, 7, 8, 9, 10, 11],
+      "vitals": {
+        "total_scenes": 115,
+        "total_solos": 187,
+        "scene_ratio": 38,
+        "top_location": "town-square",
+        "top_pair": ["Dr. Julian Hale", "Mace MacAllister"],
+        "top_pair_count": 19
+      },
+      "character_pulse": [
+        { "character": "Dr. Julian Hale",   "scenes": 61, "solos": 14, "top_partner": "Mace MacAllister" },
+        { "character": "Mace MacAllister",  "scenes": 50, "solos": 22, "top_partner": "Dr. Julian Hale" },
+        { "character": "Jeffrey Goines",    "scenes": 43, "solos": 31, "top_partner": "Mace MacAllister" },
+        { "character": "Sister Lila Voss",  "scenes": 38, "solos": 19, "top_partner": "Dr. Julian Hale" },
+        { "character": "Link Brooks",       "scenes": 38, "solos": 25, "top_partner": "Dr. Julian Hale" },
+        { "character": "Mia Thompson",      "scenes": 36, "solos": 23, "top_partner": "Link Brooks" },
+        { "character": "Sophie Laurent",    "scenes": 28, "solos": 20, "top_partner": "Dr. Julian Hale" },
+        { "character": "Dr. Ellie Vance",   "scenes": 25, "solos": 33, "top_partner": "Link Brooks" }
+      ],
+      "emergent_patterns": [
+        "Dr. Julian Hale became the town's social nucleus by Day 11, appearing in 5 of the top 10 most frequent character pairs — the highest of any character.",
+        "Jeffrey Goines disrupts without isolating. Despite erratic behavior, he accumulated 43 shared scenes across Week 1. The town does not eject him; it absorbs him.",
+        "Dr. Ellie Vance has the highest solo rate of any character — 57% of her ticks are spent alone. Her office is quiet. This is by design.",
+        "The Twisted Olive came alive at Day 9. Prior to the timing overhaul, Twisted Olive logged 3 scenes in Days 6–8 combined. Days 9–11: 26 scenes.",
+        "Town Square functions as the default corridor — characters pass through rather than linger. It leads all locations by raw count (48 scenes) but ranks lower in multi-tick stays."
+      ]
+    }
+  ]
+}

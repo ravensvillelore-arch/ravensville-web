@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import observatoryData from '../data/observatory-data.json';
+import weeklyData from '../data/observatory-weekly.json';
 
 const simStart = observatoryData.simStart;
 const currentDay = observatoryData.currentDay;
@@ -16,6 +17,9 @@ const topPairs = observatoryData.topPairs;
 const locationData = observatoryData.locationData;
 const maxLocationScenes = observatoryData.maxLocationScenes;
 const maxDayScenes = observatoryData.maxDayScenes;
+
+const weeks = weeklyData.weeks.slice().sort((a, b) => b.week - a.week);
+const latestWeek = weeks[0];
 ---
 <Base title="Observatory" description="The data layer underneath Ravensville — scene analytics, character patterns, simulation health.">
   <style>
@@ -257,6 +261,129 @@ const maxDayScenes = observatoryData.maxDayScenes;
       color: var(--purple-hi);
     }
 
+    /* Weekly vitals table */
+    .vitals-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+    .vitals-table th {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mist);
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--ash);
+    }
+    .vitals-table td {
+      padding: 0.65rem 0.75rem;
+      border-bottom: 1px solid var(--smoke);
+      font-size: 0.9rem;
+      color: var(--pale);
+      vertical-align: top;
+    }
+    .vitals-table tr:hover td { background: rgba(45,27,78,0.12); }
+    .vitals-number {
+      font-family: var(--mono);
+      font-size: 1rem;
+      color: var(--purple-hi);
+    }
+    .vitals-pair {
+      font-size: 0.85rem;
+      color: var(--pale);
+    }
+    .vitals-pair-count {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--purple-hi);
+      margin-left: 0.4rem;
+    }
+
+    /* Character pulse */
+    .pulse-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .pulse-table th {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mist);
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--ash);
+    }
+    .pulse-table td {
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid var(--smoke);
+      font-size: 0.9rem;
+      color: var(--pale);
+    }
+    .pulse-table tr:hover td { background: rgba(45,27,78,0.12); }
+    .pulse-char {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      color: var(--cream);
+    }
+    .pulse-count {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--purple-hi);
+    }
+    .pulse-solo {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--mist);
+    }
+    .pulse-week-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1rem;
+    }
+
+    /* Emergent patterns */
+    .patterns-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .pattern-item {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--smoke);
+    }
+    .pattern-item:last-child { border-bottom: none; }
+    .pattern-bullet {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--purple-hi);
+      padding-top: 0.2rem;
+    }
+    .pattern-text {
+      font-size: 0.95rem;
+      color: var(--pale);
+      line-height: 1.75;
+    }
+    .patterns-week-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
     .update-note {
       margin-top: 4rem;
       padding: 1.5rem;
@@ -281,6 +408,9 @@ const maxDayScenes = observatoryData.maxDayScenes;
     <a href="#scene-ratio">Scene Ratio</a>
     <a href="#pairs">Character Pairs</a>
     <a href="#locations">Locations</a>
+    <a href="#weekly-vitals">Weekly Vitals</a>
+    <a href="#character-pulse">Character Pulse</a>
+    <a href="#emergent">Emergent Patterns</a>
   </nav>
 
   <!-- OVERVIEW -->
@@ -406,6 +536,105 @@ const maxDayScenes = observatoryData.maxDayScenes;
       ))}
     </div>
     <p class="note">Roaming schedules updated May 20 to reflect natural human patterns — morning park walks, office hours at Vance Therapy, evening convergence at the Twisted Olive. Rerun after Day 12+ to see the shift.</p>
+  </section>
+
+  <!-- WEEKLY VITALS -->
+  <section class="section" id="weekly-vitals">
+    <h2>Weekly Vitals</h2>
+    <hr class="section-rule" />
+    <p style="color: var(--pale); font-size: 0.95rem; margin-bottom: 1.5rem;">
+      Simulation health metrics by week. Scene ratio, volume, and standout pairs — a quick pulse on how each week ran.
+    </p>
+
+    <table class="vitals-table">
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>Days</th>
+          <th>Scenes</th>
+          <th>Solos</th>
+          <th>Ratio</th>
+          <th>Top Location</th>
+          <th>Top Pair</th>
+        </tr>
+      </thead>
+      <tbody>
+        {weeks.map(w => (
+          <tr>
+            <td><span class="vitals-number">{w.week}</span></td>
+            <td style="font-family: var(--mono); font-size: 0.75rem; color: var(--mist);">
+              {w.season} {w.days[0]}–{w.days[w.days.length - 1]}
+            </td>
+            <td><span class="vitals-number">{w.vitals.total_scenes}</span></td>
+            <td style="font-family: var(--mono); font-size: 0.85rem; color: var(--mist);">{w.vitals.total_solos}</td>
+            <td><span class="vitals-number">{w.vitals.scene_ratio}%</span></td>
+            <td style="font-family: var(--mono); font-size: 0.75rem; color: var(--pale);">#{w.vitals.top_location}</td>
+            <td>
+              <span class="vitals-pair">{w.vitals.top_pair[0]} &amp; {w.vitals.top_pair[1]}</span>
+              <span class="vitals-pair-count">×{w.vitals.top_pair_count}</span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <!-- CHARACTER PULSE -->
+  <section class="section" id="character-pulse">
+    <h2>Character Pulse</h2>
+    <hr class="section-rule" />
+    <p style="color: var(--pale); font-size: 0.95rem; margin-bottom: 1.5rem;">
+      Per-character scene and solo counts for the most recent week. Who is in the mix, who is pulling back, who everyone gravitates toward.
+    </p>
+
+    <span class="pulse-week-label">
+      Week {latestWeek.week} — {latestWeek.season}, Days {latestWeek.days[0]}–{latestWeek.days[latestWeek.days.length - 1]}
+    </span>
+
+    <table class="pulse-table">
+      <thead>
+        <tr>
+          <th>Character</th>
+          <th>Scenes</th>
+          <th>Solo</th>
+          <th>Top Partner</th>
+        </tr>
+      </thead>
+      <tbody>
+        {latestWeek.character_pulse.map(c => (
+          <tr>
+            <td><span class="pulse-char">{c.character}</span></td>
+            <td><span class="pulse-count">{c.scenes}</span></td>
+            <td><span class="pulse-solo">{c.solos}</span></td>
+            <td style="font-size: 0.85rem; color: var(--mist);">{c.top_partner}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p class="note">Scene counts reflect shared-scene participation, not unique conversations. A character in a 4-person scene counts once per tick.</p>
+  </section>
+
+  <!-- EMERGENT PATTERNS -->
+  <section class="section" id="emergent">
+    <h2>Emergent Patterns</h2>
+    <hr class="section-rule" />
+    <p style="color: var(--pale); font-size: 0.95rem; margin-bottom: 1.5rem;">
+      Behaviors and patterns that arose without instruction. What the simulation produced that nobody explicitly programmed.
+    </p>
+
+    {weeks.map(w => (
+      <div style="margin-bottom: 3rem;">
+        <span class="patterns-week-eyebrow">Week {w.week} — {w.season}, Days {w.days[0]}–{w.days[w.days.length - 1]}</span>
+        <ul class="patterns-list">
+          {w.emergent_patterns.map((p, i) => (
+            <li class="pattern-item">
+              <span class="pattern-bullet">0{i + 1}</span>
+              <span class="pattern-text">{p}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
   </section>
 
   <div class="update-note">
