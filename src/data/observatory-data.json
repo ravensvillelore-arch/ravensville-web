@@ -1,6 +1,6 @@
 {
   "simStart": "May 2026",
-  "currentDay": 11,
+  "currentDay": 12,
   "currentSeason": "Autumn",
   "dayData": [
     {
@@ -40,90 +40,97 @@
     },
     {
       "day": 11,
-      "ticks": 5,
-      "scenes": 14,
-      "solos": 6,
-      "scene_pct": 70
+      "ticks": 16,
+      "scenes": 40,
+      "solos": 18,
+      "scene_pct": 69
+    },
+    {
+      "day": 12,
+      "ticks": 16,
+      "scenes": 34,
+      "solos": 27,
+      "scene_pct": 56
     }
   ],
-  "totalScenes": 115,
-  "totalSolos": 187,
-  "totalTicks": 114,
-  "overallRatio": 38,
+  "totalScenes": 175,
+  "totalSolos": 226,
+  "totalTicks": 141,
+  "overallRatio": 44,
   "topPairs": [
     {
       "a": "Dr. Julian Hale",
-      "b": "Mace MacAllister",
-      "count": 19
-    },
-    {
-      "a": "Jeffrey Goines",
-      "b": "Mace MacAllister",
-      "count": 18
-    },
-    {
-      "a": "Dr. Julian Hale",
       "b": "Sister Lila",
-      "count": 18
+      "count": 38
     },
     {
       "a": "Dr. Julian Hale",
-      "b": "Link Brooks",
-      "count": 14
-    },
-    {
-      "a": "Dr. Julian Hale",
-      "b": "Mia Thompson",
-      "count": 13
-    },
-    {
-      "a": "Link Brooks",
-      "b": "Mia Thompson",
-      "count": 12
+      "b": "Mace MacAllister",
+      "count": 32
     },
     {
       "a": "Dr. Ellie Vance",
       "b": "Link Brooks",
-      "count": 12
+      "count": 28
     },
     {
       "a": "Mace MacAllister",
       "b": "Sister Lila",
-      "count": 12
+      "count": 28
+    },
+    {
+      "a": "Jeffrey Goines",
+      "b": "Mace MacAllister",
+      "count": 23
+    },
+    {
+      "a": "Dr. Julian Hale",
+      "b": "Mia Thompson",
+      "count": 23
+    },
+    {
+      "a": "Link Brooks",
+      "b": "Mia Thompson",
+      "count": 22
+    },
+    {
+      "a": "Jeffrey Goines",
+      "b": "Sophie Laurent",
+      "count": 21
+    },
+    {
+      "a": "Sister Lila",
+      "b": "Sophie Laurent",
+      "count": 21
     },
     {
       "a": "Dr. Julian Hale",
       "b": "Sophie Laurent",
-      "count": 11
-    },
-    {
-      "a": "Mace MacAllister",
-      "b": "Mia Thompson",
-      "count": 11
+      "count": 19
     }
   ],
   "locationData": [
     {
       "name": "town-square",
-      "scenes": 48
+      "scenes": 72
     },
     {
       "name": "twisted-olive",
-      "scenes": 29
+      "scenes": 45
     },
     {
       "name": "brewsome",
-      "scenes": 26
-    },
-    {
-      "name": "the-park",
-      "scenes": 6
+      "scenes": 36
     },
     {
       "name": "vance-therapy",
-      "scenes": 6
+      "scenes": 15
+    },
+    {
+      "name": "the-park",
+      "scenes": 7
     }
   ],
-  "maxLocationScenes": 48,
-  "maxDayScenes": 20
+  "maxLocationScenes": 72,
+  "maxDayScenes": 61
 }

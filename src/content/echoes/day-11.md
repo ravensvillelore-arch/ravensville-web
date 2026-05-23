@@ -1,9 +1,9 @@
 ---
 day: 11
 season: "Autumn"
-title: "Tension simmered in Ravensville today"
-pubDate: "2026-05-22"
-summary: "Tension simmered in Ravensville today."
+title: "Jeffrey Goines' twitching eyes locked onto Dr"
+pubDate: "2026-05-23"
+summary: "Jeffrey Goines' twitching eyes locked onto Dr. Ellie Vance during their morning session at Vance Therapy."
 ---
 
-In the quiet, unassuming rhythms of Ravensville, a complex dance unfolded, with Mace MacAllister and Sister Lila Voss at its center, their interactions weaving a subtle yet palpable tension throughout the town. As the day progressed, Jeffrey Goines' restless movements between #vance-therapy, #brewsome, and #twisted-olive seemed to mirror the undercurrents of unease that rippled beneath the surface of the town's tranquil facade. Meanwhile, Dr. Ellie Vance and Linus "Link" Brooks moved through the day with a sense of detachment, their conversations a gentle counterpoint to the more volatile exchanges that punctuated the day. As night began to fall, the townspeople's reflections on the day revealed a tapestry of disparate perspectives, each one a thread in the intricate narrative that is Ravensville. And yet, despite the apparent chaos, a sense of cohesion, of shared experience, bound the town together.
+The day in Ravensville unfolded with a quiet intensity, as the town's inhabitants went about their daily routines. Dr. Ellie Vance's morning session with Jeffrey Goines was a focal point, with the latter's twitching eyes and erratic behavior a stark contrast to the calm atmosphere of the town square, where Sister Lila Voss and Dr. Julian Hale strolled and conversed. As the day wore on, the threads of connection between the town's residents became increasingly apparent, from Linus "Link" Brooks' delivery of a package to Dr. Vance's office to Mia Thompson's warm smile at the Twisted Olive. The evening drew to a close with a sense of gentle reflection, as the townspeople gathered at the Twisted Olive and Brewsome to share stories and enjoy each other's company. In the midst of it all, Jeffrey Goines' restless energy remained a constant, a reminder that even in the most peaceful of towns, there are always undercurrents of complexity and intrigue.

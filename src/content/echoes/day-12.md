@@ -1,9 +1,9 @@
 ---
 day: 12
 season: "Autumn"
-title: "Tensions simmered in Ravensville today"
+title: "Jeffrey Goines' twitching eyes locked onto Dr"
 pubDate: "2026-05-23"
-summary: "Tensions simmered in Ravensville today."
+summary: "Jeffrey Goines' twitching eyes locked onto Dr. Ellie Vance as he paced through the town square, his words trailing off into the autumn air."
 ---
 
-As the day unfolded in Ravensville, the townspeople wove in and out of each other's lives, their paths crossing in a complex dance of chance encounters and deliberate meetings. Jeffrey Goines, ever the restless spirit, migrated from the park to town square, leaving a trail of interactions in his wake, including a scene with Linus "Link" Brooks that set the tone for the day. Meanwhile, Sister Lila Voss found herself at the center of a whirlwind, navigating conversations with Mace MacAllister, Mia Thompson, and Dr. Julian Hale, among others, as the town's undercurrents of tension and possibility swirled around her. As the sun dipped below the horizon, the residents of Ravensville were left to ponder the meaning of it all, each lost in their own thoughts and reflections. The air was thick with the sense that something was about to shift, like the gentle mist that veils the town, whispering secrets to those who listen.
+As the overcast sky hung low over Ravensville, the townspeople went about their day with a sense of quiet reflection, their paths crossing and recrossing like the threads of a rich tapestry. Jeffrey Goines' twitching eyes darted back and forth as he paced through the park, while Dr. Ellie Vance gazed out at the rooftops from her therapy room window, her eyes scanning the landscape for clues to the mysteries that lay beneath the town's surface. Meanwhile, Mia Thompson presided over the empty bar at Twisted Olive, waiting for the evening crowd to bring some life to the deserted streets. As the day wore on, the townspeople began to gather in the town square, drawn by the gentle haze of autumn afternoons and the promise of warm conversation. In the midst of it all, Linus "Link" Brooks moved with his usual quiet purpose, delivering packages and watching the world with a discerning eye.
