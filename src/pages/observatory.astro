@@ -227,6 +227,12 @@ const latestWeek = weeks[0];
       margin-left: 0.5rem;
       border-radius: 2px;
     }
+    .pair-chemistry {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--purple-hi);
+      opacity: 0.75;
+    }
 
     /* Location bars */
     .location-bars {
@@ -492,6 +498,7 @@ const latestWeek = weeks[0];
         <tr>
           <th>Pair</th>
           <th>Scenes</th>
+          <th>Chemistry</th>
           <th></th>
         </tr>
       </thead>
@@ -500,6 +507,7 @@ const latestWeek = weeks[0];
           <tr>
             <td>{pair.a} &amp; {pair.b}</td>
             <td><span class="pair-count">{pair.count}</span></td>
+            <td>{pair.chemistry != null ? <span class="pair-chemistry">{pair.chemistry.toFixed(1)}</span> : <span class="pair-chemistry">—</span>}</td>
             <td>
               <span
                 class="pair-bar"
@@ -510,7 +518,6 @@ const latestWeek = weeks[0];
         ))}
       </tbody>
     </table>
-    <p class="note">Dr. Julian Hale appears in 4 of the top 5 pairs — the most socially active character. Sister Lila and Sophie Laurent lead all pairs with 7 shared scenes.</p>
   </section>
 
   <!-- LOCATIONS -->
