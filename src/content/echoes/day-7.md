@@ -1,9 +1,9 @@
 ---
 day: 7
 season: "Autumn"
-title: "Goines chases ghosts through Ravensville, while a veiled town hums with secrets and shifting anticipation"
+title: "Dr"
 pubDate: "2026-05-19"
-summary: "Goines chases ghosts through Ravensville, while a veiled town hums with secrets and shifting anticipation."
+summary: "Dr. Julian Hale found the overcast sky \"quite intriguing\" as he strolled through town."
 ---
 
-Ravensville’s morning fog clung stubbornly, a damp veil over the usual comings and goings. Jeffrey Goines, a creature of restless motion, seemed to chase his own shadow, flitting between the Town Square, the Twisted Olive, and Brewsome, his pronouncements a jumble of fractured anxieties. At the Twisted Olive, he tangled with Dr. Hale, and later, Dr. Hale, Mia Thompson, and Sister Lila Voss shared a hushed conversation, the air thick with unspoken things. Mace MacAllister, ever the stoic observer, found himself in quiet exchanges with Linus “Link” Brooks in the Town Square, a brief respite before the day’s peculiar currents pulled everyone along. By evening, the fog had lifted, leaving behind the quiet hum of a town that, as Dr. Hale noted, felt like it was subtly shifting, a sentiment echoed in Sister Lila’s whispers of secrets and Mia’s effervescent anticipation.
+As the overcast sky hung above Ravensville, Dr. Julian Hale mused to Sophie Laurent about its intrigue, saying "the way" it made everything feel was quite captivating, and this sense of curiosity seemed to permeate the day, as Mace MacAllister later noted to Link Brooks, and Jeffrey Goines' wild laughter echoed through the misty morning, sparking Dr. Ellie Vance's interest. The conversations wove together like the threads of a tapestry, with each person adding their own unique perspective, from Link Brooks' neutral expression to Sister Lila Voss' gentle hum of energy. As the day drew to a close, the residents of Ravensville reflected on the subtle dynamics and intriguing observations that had unfolded, with Dr. Julian Hale likening it to a "lazy summer morning, warm with the promise of subtle observations." The day was a testament to the town's peculiar charm, where the ordinary and extraordinary blended seamlessly together. As Mace MacAllister slid into the stool next to Link Brooks, he nodded slightly, and the evening wore on, filled with the promise of new connections and unexpected encounters.

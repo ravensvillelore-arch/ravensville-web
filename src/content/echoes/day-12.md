@@ -1,9 +1,9 @@
 ---
 day: 12
 season: "Autumn"
-title: "Jeffrey Goines' twitching eyes locked onto Dr"
+title: "Link Brooks navigated Ravensville's familiar roads, notin..."
 pubDate: "2026-05-23"
-summary: "Jeffrey Goines' twitching eyes locked onto Dr. Ellie Vance as he paced through the town square, his words trailing off into the autumn air."
+summary: "Link Brooks navigated Ravensville's familiar roads, noting \"same roads, different weather\"."
 ---
 
-As the overcast sky hung low over Ravensville, the townspeople went about their day with a sense of quiet reflection, their paths crossing and recrossing like the threads of a rich tapestry. Jeffrey Goines' twitching eyes darted back and forth as he paced through the park, while Dr. Ellie Vance gazed out at the rooftops from her therapy room window, her eyes scanning the landscape for clues to the mysteries that lay beneath the town's surface. Meanwhile, Mia Thompson presided over the empty bar at Twisted Olive, waiting for the evening crowd to bring some life to the deserted streets. As the day wore on, the townspeople began to gather in the town square, drawn by the gentle haze of autumn afternoons and the promise of warm conversation. In the midst of it all, Linus "Link" Brooks moved with his usual quiet purpose, delivering packages and watching the world with a discerning eye.
+As the morning unfolded in Ravensville, the gentle breeze and soft stirring of leaves seemed to set the tone for a day of quiet reflection, with Sister Lila noting that "the current is gentle today, isn't it?" and Dr. Julian Hale observing that the town was asking for "a bit of balance" and "a reminder of the beauty in quiet mornings." The day's conversations wove in and out of the town's gathering places, from Brewsome to the Twisted Olive, where Mia Thompson's warmth and hospitality drew people in, and Sophie Laurent's kindness helped to ease Jeffrey Goines' twitching anxiety. Despite the undercurrent of tension that Dr. Ellie Vance sensed, the day felt like a morning "like any other" to Link Brooks, with the fog still burning off the river. As the evening drew to a close, Dr. Julian Hale reflected on the "delightful tang of possibility" hanging in the air, a sense that Ravensville was on the cusp of something new.

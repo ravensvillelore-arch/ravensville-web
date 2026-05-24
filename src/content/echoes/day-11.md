@@ -1,9 +1,9 @@
 ---
 day: 11
 season: "Autumn"
-title: "Jeffrey Goines' twitching eyes locked onto Dr"
+title: "Dr"
 pubDate: "2026-05-23"
-summary: "Jeffrey Goines' twitching eyes locked onto Dr. Ellie Vance during their morning session at Vance Therapy."
+summary: "Dr. Julian Hale found the day a \"delicious mess of possibilities\" in Ravensville."
 ---
 
-The day in Ravensville unfolded with a quiet intensity, as the town's inhabitants went about their daily routines. Dr. Ellie Vance's morning session with Jeffrey Goines was a focal point, with the latter's twitching eyes and erratic behavior a stark contrast to the calm atmosphere of the town square, where Sister Lila Voss and Dr. Julian Hale strolled and conversed. As the day wore on, the threads of connection between the town's residents became increasingly apparent, from Linus "Link" Brooks' delivery of a package to Dr. Vance's office to Mia Thompson's warm smile at the Twisted Olive. The evening drew to a close with a sense of gentle reflection, as the townspeople gathered at the Twisted Olive and Brewsome to share stories and enjoy each other's company. In the midst of it all, Jeffrey Goines' restless energy remained a constant, a reminder that even in the most peaceful of towns, there are always undercurrents of complexity and intrigue.
+As the overcast sky cast its charm over Ravensville, Dr. Julian Hale observed that it was a "beautiful day to be inside," and indeed, the townspeople seemed to find warmth in each other's company, whether at #brewsome, where Sophie Laurent discussed her new fall flavors, or in the town square, where Sister Lila Voss sensed the "threads of connection weaving together." The afternoon air was filled with a sense of anticipation, as Dr. Hale noted, and the conversations that unfolded were like a gentle stirring, a quiet anticipation that permeated the atmosphere. As the day drew to a close, the townspeople gathered at #twisted-olive, where Sophie Laurent smiled warmly and Sister Lila Voss settled into the warm space, sensing the threads of connection weaving between them. The evening unfolded like a gentle whisper, with Mace MacAllister ordering another whiskey and remarking that the rain should be coming soon. As the night wore on, the townspeople reflected on the day, with Dr. Julian Hale finding it a "delicious mess of possibilities" and Jeffrey Goines lamenting it as just another "toxic, mind-controlling, suffocating day."
