@@ -1,6 +1,6 @@
 {
   "simStart": "May 2026",
-  "currentDay": 13,
+  "currentDay": 14,
   "currentSeason": "Autumn",
   "dayData": [
     {
@@ -54,34 +54,41 @@
     },
     {
       "day": 13,
-      "ticks": 14,
-      "scenes": 31,
+      "ticks": 16,
+      "scenes": 36,
+      "solos": 27,
+      "scene_pct": 57
+    },
+    {
+      "day": 14,
+      "ticks": 15,
+      "scenes": 32,
       "solos": 25,
-      "scene_pct": 55
+      "scene_pct": 56
     }
   ],
-  "totalScenes": 206,
-  "totalSolos": 251,
-  "totalTicks": 155,
-  "overallRatio": 45,
+  "totalScenes": 243,
+  "totalSolos": 278,
+  "totalTicks": 172,
+  "overallRatio": 47,
   "topPairs": [
     {
       "a": "Dr. Julian Hale",
       "b": "Sister Lila",
-      "count": 46,
-      "chemistry": 8.32
+      "count": 47,
+      "chemistry": 8.3
     },
     {
       "a": "Mace MacAllister",
       "b": "Sister Lila",
-      "count": 40,
-      "chemistry": 8.3
+      "count": 41,
+      "chemistry": 8.28
     },
     {
       "a": "Dr. Julian Hale",
       "b": "Mace MacAllister",
-      "count": 36,
-      "chemistry": 8.44
+      "count": 37,
+      "chemistry": 8.42
     },
     {
       "a": "Dr. Ellie Vance",
@@ -114,40 +121,40 @@
       "chemistry": 6.92
     },
     {
+      "a": "Link Brooks",
+      "b": "Mia Thompson",
+      "count": 26,
+      "chemistry": 7.78
+    },
+    {
       "a": "Jeffrey Goines",
       "b": "Sophie Laurent",
       "count": 26,
       "chemistry": 7.16
-    },
-    {
-      "a": "Link Brooks",
-      "b": "Mia Thompson",
-      "count": 25,
-      "chemistry": 7.81
     }
   ],
   "locationData": [
     {
       "name": "town-square",
-      "scenes": 83
+      "scenes": 97
     },
     {
       "name": "twisted-olive",
-      "scenes": 53
+      "scenes": 63
     },
     {
       "name": "brewsome",
-      "scenes": 42
+      "scenes": 49
     },
     {
       "name": "vance-therapy",
-      "scenes": 18
+      "scenes": 22
     },
     {
       "name": "the-park",
-      "scenes": 10
+      "scenes": 12
     }
   ],
-  "maxLocationScenes": 83,
-  "maxDayScenes": 56
+  "maxLocationScenes": 97,
+  "maxDayScenes": 57
 }
