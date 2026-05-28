@@ -1,6 +1,36 @@
 {
   "weeks": [
     {
+      "week": 2,
+      "season": "Autumn",
+      "days": [12, 13, 14, 15, 16, 17],
+      "vitals": {
+        "total_scenes": 205,
+        "total_solos": 137,
+        "scene_ratio": 60,
+        "top_location": "town-square",
+        "top_pair": ["Dr. Julian Hale", "Sister Lila Voss"],
+        "top_pair_count": 55
+      },
+      "character_pulse": [
+        { "character": "Sister Lila Voss",      "scenes": 90, "solos": 6,  "top_partner": "Dr. Julian Hale" },
+        { "character": "Dr. Julian Hale",        "scenes": 86, "solos": 10, "top_partner": "Sister Lila Voss" },
+        { "character": "Jeffrey Goines",         "scenes": 83, "solos": 13, "top_partner": "Dr. Ellie Vance" },
+        { "character": "Dr. Ellie Vance",        "scenes": 80, "solos": 16, "top_partner": "Jeffrey Goines" },
+        { "character": "Linus \"Link\" Brooks",  "scenes": 77, "solos": 19, "top_partner": "Dr. Ellie Vance" },
+        { "character": "Mace MacAllister",       "scenes": 76, "solos": 20, "top_partner": "Dr. Julian Hale" },
+        { "character": "Mia Thompson",           "scenes": 72, "solos": 24, "top_partner": "Dr. Julian Hale" },
+        { "character": "Sophie Laurent",         "scenes": 67, "solos": 29, "top_partner": "Mace MacAllister" }
+      ],
+      "emergent_patterns": [
+        "Scene ratio jumped from 38% to 60% in Week 2 — the first week to hit the 50-60% target. The timing system is producing the density it was designed for.",
+        "Sister Lila Voss overtook Dr. Julian Hale as the most socially present character (90 scenes vs 86). She was 4th in Week 1. Nobody programmed this shift.",
+        "Julian Hale and Sister Lila Voss became the dominant pair with 55 shared scenes — nearly 3x the top pair count from Week 1. A gravitational pull that wasn't there before.",
+        "Jeffrey Goines found a primary orbit: Dr. Ellie Vance. His top partner shifted from Mace MacAllister to the town's therapist. He is not seeking help. He is seeking an audience.",
+        "Link arrived at the Twisted Olive on Day 16 with a small package. Eight characters asked about it across two time periods. It was never opened. It was still on the bar when he left."
+      ]
+    },
+    {
       "week": 1,
       "season": "Autumn",
       "days": [6, 7, 8, 9, 10, 11],
