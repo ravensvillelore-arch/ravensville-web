@@ -411,10 +411,10 @@ const latestWeek = weeks[0];
 
   <nav class="section-nav">
     <a href="#overview">Overview</a>
+    <a href="#weekly-vitals">Weekly Vitals</a>
     <a href="#scene-ratio">Scene Ratio</a>
     <a href="#pairs">Character Pairs</a>
     <a href="#locations">Locations</a>
-    <a href="#weekly-vitals">Weekly Vitals</a>
     <a href="#character-pulse">Character Pulse</a>
     <a href="#emergent">Emergent Patterns</a>
   </nav>
@@ -454,6 +454,47 @@ const latestWeek = weeks[0];
     <p class="note">
       Data shown from Day 6 onwards. Days 1-5 excluded — early API quota issues caused characters to be silently skipped, making those numbers unreliable. Day 9 reflects the first day of the new simulation timing (8 characters active every tick, hourly ticks with sleep window).
     </p>
+  </section>
+
+  <!-- WEEKLY VITALS -->
+  <section class="section" id="weekly-vitals">
+    <h2>Weekly Vitals</h2>
+    <hr class="section-rule" />
+    <p style="color: var(--pale); font-size: 0.95rem; margin-bottom: 1.5rem;">
+      Simulation health metrics by week. Scene ratio, volume, and standout pairs — a quick pulse on how each week ran.
+    </p>
+
+    <table class="vitals-table">
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>Days</th>
+          <th>Scenes</th>
+          <th>Solos</th>
+          <th>Ratio</th>
+          <th>Top Location</th>
+          <th>Top Pair</th>
+        </tr>
+      </thead>
+      <tbody>
+        {weeks.map(w => (
+          <tr>
+            <td><span class="vitals-number">{w.week}</span></td>
+            <td style="font-family: var(--mono); font-size: 0.75rem; color: var(--mist);">
+              {w.season} {w.days[0]}–{w.days[w.days.length - 1]}
+            </td>
+            <td><span class="vitals-number">{w.vitals.total_scenes}</span></td>
+            <td style="font-family: var(--mono); font-size: 0.85rem; color: var(--mist);">{w.vitals.total_solos}</td>
+            <td><span class="vitals-number">{w.vitals.scene_ratio}%</span></td>
+            <td style="font-family: var(--mono); font-size: 0.75rem; color: var(--pale);">#{w.vitals.top_location}</td>
+            <td>
+              <span class="vitals-pair">{w.vitals.top_pair[0]} &amp; {w.vitals.top_pair[1]}</span>
+              <span class="vitals-pair-count">×{w.vitals.top_pair_count}</span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   </section>
 
   <!-- SCENE RATIO -->
@@ -543,47 +584,6 @@ const latestWeek = weeks[0];
       ))}
     </div>
     <p class="note">Roaming schedules updated May 20 to reflect natural human patterns — morning park walks, office hours at Vance Therapy, evening convergence at the Twisted Olive. Rerun after Day 12+ to see the shift.</p>
-  </section>
-
-  <!-- WEEKLY VITALS -->
-  <section class="section" id="weekly-vitals">
-    <h2>Weekly Vitals</h2>
-    <hr class="section-rule" />
-    <p style="color: var(--pale); font-size: 0.95rem; margin-bottom: 1.5rem;">
-      Simulation health metrics by week. Scene ratio, volume, and standout pairs — a quick pulse on how each week ran.
-    </p>
-
-    <table class="vitals-table">
-      <thead>
-        <tr>
-          <th>Week</th>
-          <th>Days</th>
-          <th>Scenes</th>
-          <th>Solos</th>
-          <th>Ratio</th>
-          <th>Top Location</th>
-          <th>Top Pair</th>
-        </tr>
-      </thead>
-      <tbody>
-        {weeks.map(w => (
-          <tr>
-            <td><span class="vitals-number">{w.week}</span></td>
-            <td style="font-family: var(--mono); font-size: 0.75rem; color: var(--mist);">
-              {w.season} {w.days[0]}–{w.days[w.days.length - 1]}
-            </td>
-            <td><span class="vitals-number">{w.vitals.total_scenes}</span></td>
-            <td style="font-family: var(--mono); font-size: 0.85rem; color: var(--mist);">{w.vitals.total_solos}</td>
-            <td><span class="vitals-number">{w.vitals.scene_ratio}%</span></td>
-            <td style="font-family: var(--mono); font-size: 0.75rem; color: var(--pale);">#{w.vitals.top_location}</td>
-            <td>
-              <span class="vitals-pair">{w.vitals.top_pair[0]} &amp; {w.vitals.top_pair[1]}</span>
-              <span class="vitals-pair-count">×{w.vitals.top_pair_count}</span>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
   </section>
 
   <!-- CHARACTER PULSE -->
