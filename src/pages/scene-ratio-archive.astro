@@ -1,0 +1,133 @@
+---
+import Base from '../layouts/Base.astro';
+import observatoryData from '../data/observatory-data.json';
+
+const dayData = observatoryData.dayData;
+---
+<Base title="Scene Ratio — Archive" description="Full day-by-day scene ratio history for the Ravensville simulation.">
+  <style>
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--purple-hi);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--paper);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+    .lead {
+      font-size: 1rem;
+      color: var(--mist);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+    .back-link {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--purple-hi);
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .ratio-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .ratio-row {
+      display: grid;
+      grid-template-columns: 60px 1fr 60px;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .ratio-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--mist);
+      text-align: right;
+    }
+    .ratio-bar-track {
+      background: var(--smoke);
+      height: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .ratio-bar-scene {
+      background: var(--purple-hi);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: white;
+      white-space: nowrap;
+      transition: width 0.3s;
+    }
+    .ratio-bar-solo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background: var(--smoke);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: var(--mist);
+    }
+    .ratio-pct {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--purple-hi);
+    }
+    .target-line {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--mist);
+      margin-top: 0.5rem;
+      padding-left: 68px;
+    }
+  </style>
+
+  <a class="back-link" href="/observatory#scene-ratio">&larr; Back to Observatory</a>
+
+  <span class="eyebrow">Scene Ratio — Full History</span>
+  <h1>All Days</h1>
+  <p class="lead">
+    Complete day-by-day scene ratio record. A scene happens when two or more characters are in the same location at the same tick. Target is 50–60%.
+  </p>
+
+  <div class="ratio-chart">
+    {dayData.map(d => (
+      <div class="ratio-row">
+        <span class="ratio-label">Day {d.day}</span>
+        <div class="ratio-bar-track">
+          <div class="ratio-bar-scene" style={`width: ${d.scene_pct}%`}>
+            {d.scene_pct > 15 ? `${d.scenes} scenes` : ''}
+          </div>
+          <div class="ratio-bar-solo" style={`width: ${100 - d.scene_pct}%`}>
+            {100 - d.scene_pct > 15 ? `${d.solos} solo` : ''}
+          </div>
+        </div>
+        <span class="ratio-pct">{d.scene_pct}%</span>
+      </div>
+    ))}
+  </div>
+  <p class="target-line">Target: 50% &mdash; Day 9 reached 41% on first day of new timing</p>
+</Base>

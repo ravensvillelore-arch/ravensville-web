@@ -8,6 +8,8 @@ const currentDay = observatoryData.currentDay;
 const currentSeason = observatoryData.currentSeason;
 
 const dayData = observatoryData.dayData;
+const recentDayData = dayData.slice(-10);
+const olderDayData = dayData.slice(0, -10);
 const totalScenes = observatoryData.totalScenes;
 const totalSolos = observatoryData.totalSolos;
 const totalTicks = observatoryData.totalTicks;
@@ -506,7 +508,7 @@ const latestWeek = weeks[0];
     </p>
 
     <div class="ratio-chart">
-      {dayData.map(d => {
+      {recentDayData.map(d => {
         return (
           <div class="ratio-row">
             <span class="ratio-label">Day {d.day}</span>
@@ -524,6 +526,11 @@ const latestWeek = weeks[0];
       })}
     </div>
     <p class="target-line">Target: 50% &mdash; Day 9 reached 41% on first day of new timing</p>
+    {olderDayData.length > 0 && (
+      <p class="note" style="margin-top: 1.5rem;">
+        Showing the last 10 days. <a href="/scene-ratio-archive" style="color: var(--purple-hi); text-decoration: underline;">View earlier records (Days {olderDayData[0].day}–{olderDayData[olderDayData.length - 1].day}) &rarr;</a>
+      </p>
+    )}
   </section>
 
   <!-- CHARACTER PAIRS -->
