@@ -1,31 +1,229 @@
 {
   "weeks": [
     {
+      "week": 4,
+      "season": "Autumn",
+      "days": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "vitals": {
+        "total_scenes": 167,
+        "total_solos": 88,
+        "scene_ratio": 65,
+        "top_location": "twisted-olive",
+        "top_pair": [
+          "Jeffrey Goines",
+          "Sophie Laurent"
+        ],
+        "top_pair_count": 59
+      },
+      "character_pulse": [
+        {
+          "character": "Jeffrey Goines",
+          "scenes": 79,
+          "solos": 1,
+          "top_partner": "Sophie Laurent"
+        },
+        {
+          "character": "Sister Lila",
+          "scenes": 77,
+          "solos": 4,
+          "top_partner": "Link Brooks"
+        },
+        {
+          "character": "Link Brooks",
+          "scenes": 74,
+          "solos": 6,
+          "top_partner": "Sister Lila"
+        },
+        {
+          "character": "Mace MacAllister",
+          "scenes": 73,
+          "solos": 7,
+          "top_partner": "Jeffrey Goines"
+        },
+        {
+          "character": "Sophie Laurent",
+          "scenes": 71,
+          "solos": 10,
+          "top_partner": "Jeffrey Goines"
+        },
+        {
+          "character": "Dr. Julian Hale",
+          "scenes": 66,
+          "solos": 14,
+          "top_partner": "Jeffrey Goines"
+        },
+        {
+          "character": "Mia Thompson",
+          "scenes": 58,
+          "solos": 22,
+          "top_partner": "Dr. Julian Hale"
+        },
+        {
+          "character": "Dr. Ellie Vance",
+          "scenes": 56,
+          "solos": 24,
+          "top_partner": "Link Brooks"
+        }
+      ],
+      "emergent_patterns": []
+    },
+    {
+      "week": 3,
+      "season": "Autumn",
+      "days": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "vitals": {
+        "total_scenes": 187,
+        "total_solos": 104,
+        "scene_ratio": 64,
+        "top_location": "twisted-olive",
+        "top_pair": [
+          "Mia Thompson",
+          "Sister Lila"
+        ],
+        "top_pair_count": 56
+      },
+      "character_pulse": [
+        {
+          "character": "Sister Lila",
+          "scenes": 91,
+          "solos": 5,
+          "top_partner": "Mia Thompson"
+        },
+        {
+          "character": "Jeffrey Goines",
+          "scenes": 90,
+          "solos": 9,
+          "top_partner": "Sister Lila"
+        },
+        {
+          "character": "Dr. Ellie Vance",
+          "scenes": 90,
+          "solos": 6,
+          "top_partner": "Mia Thompson"
+        },
+        {
+          "character": "Mia Thompson",
+          "scenes": 87,
+          "solos": 9,
+          "top_partner": "Sister Lila"
+        },
+        {
+          "character": "Mace MacAllister",
+          "scenes": 86,
+          "solos": 10,
+          "top_partner": "Jeffrey Goines"
+        },
+        {
+          "character": "Dr. Julian Hale",
+          "scenes": 81,
+          "solos": 15,
+          "top_partner": "Dr. Ellie Vance"
+        },
+        {
+          "character": "Sophie Laurent",
+          "scenes": 78,
+          "solos": 18,
+          "top_partner": "Jeffrey Goines"
+        },
+        {
+          "character": "Link Brooks",
+          "scenes": 64,
+          "solos": 32,
+          "top_partner": "Sister Lila"
+        }
+      ],
+      "emergent_patterns": []
+    },
+    {
       "week": 2,
       "season": "Autumn",
-      "days": [12, 13, 14, 15, 16, 17],
+      "days": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
       "vitals": {
         "total_scenes": 205,
         "total_solos": 137,
         "scene_ratio": 60,
         "top_location": "town-square",
-        "top_pair": ["Dr. Julian Hale", "Sister Lila Voss"],
+        "top_pair": [
+          "Dr. Julian Hale",
+          "Sister Lila"
+        ],
         "top_pair_count": 55
       },
       "character_pulse": [
-        { "character": "Sister Lila Voss",      "scenes": 90, "solos": 6,  "top_partner": "Dr. Julian Hale" },
-        { "character": "Dr. Julian Hale",        "scenes": 86, "solos": 10, "top_partner": "Sister Lila Voss" },
-        { "character": "Jeffrey Goines",         "scenes": 83, "solos": 13, "top_partner": "Dr. Ellie Vance" },
-        { "character": "Dr. Ellie Vance",        "scenes": 80, "solos": 16, "top_partner": "Jeffrey Goines" },
-        { "character": "Linus \"Link\" Brooks",  "scenes": 77, "solos": 19, "top_partner": "Dr. Ellie Vance" },
-        { "character": "Mace MacAllister",       "scenes": 76, "solos": 20, "top_partner": "Dr. Julian Hale" },
-        { "character": "Mia Thompson",           "scenes": 72, "solos": 24, "top_partner": "Dr. Julian Hale" },
-        { "character": "Sophie Laurent",         "scenes": 67, "solos": 29, "top_partner": "Mace MacAllister" }
+        {
+          "character": "Sister Lila",
+          "scenes": 90,
+          "solos": 6,
+          "top_partner": "Dr. Julian Hale"
+        },
+        {
+          "character": "Dr. Julian Hale",
+          "scenes": 86,
+          "solos": 10,
+          "top_partner": "Sister Lila"
+        },
+        {
+          "character": "Jeffrey Goines",
+          "scenes": 83,
+          "solos": 13,
+          "top_partner": "Dr. Ellie Vance"
+        },
+        {
+          "character": "Dr. Ellie Vance",
+          "scenes": 80,
+          "solos": 16,
+          "top_partner": "Jeffrey Goines"
+        },
+        {
+          "character": "Link Brooks",
+          "scenes": 77,
+          "solos": 19,
+          "top_partner": "Dr. Ellie Vance"
+        },
+        {
+          "character": "Mace MacAllister",
+          "scenes": 76,
+          "solos": 20,
+          "top_partner": "Dr. Julian Hale"
+        },
+        {
+          "character": "Mia Thompson",
+          "scenes": 72,
+          "solos": 24,
+          "top_partner": "Dr. Julian Hale"
+        },
+        {
+          "character": "Sophie Laurent",
+          "scenes": 67,
+          "solos": 29,
+          "top_partner": "Mace MacAllister"
+        }
       ],
       "emergent_patterns": [
-        "Scene ratio jumped from 38% to 60% in Week 2 — the first week to hit the 50-60% target. The timing system is producing the density it was designed for.",
+        "Scene ratio jumped from 38% to 60% in Week 2 \u2014 the first week to hit the 50-60% target. The timing system is producing the density it was designed for.",
         "Sister Lila Voss overtook Dr. Julian Hale as the most socially present character (90 scenes vs 86). She was 4th in Week 1. Nobody programmed this shift.",
-        "Julian Hale and Sister Lila Voss became the dominant pair with 55 shared scenes — nearly 3x the top pair count from Week 1. A gravitational pull that wasn't there before.",
+        "Julian Hale and Sister Lila Voss became the dominant pair with 55 shared scenes \u2014 nearly 3x the top pair count from Week 1. A gravitational pull that wasn't there before.",
         "Jeffrey Goines found a primary orbit: Dr. Ellie Vance. His top partner shifted from Mace MacAllister to the town's therapist. He is not seeking help. He is seeking an audience.",
         "Link arrived at the Twisted Olive on Day 16 with a small package. Eight characters asked about it across two time periods. It was never opened. It was still on the bar when he left."
       ]
@@ -33,31 +231,87 @@
     {
       "week": 1,
       "season": "Autumn",
-      "days": [6, 7, 8, 9, 10, 11],
+      "days": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
       "vitals": {
-        "total_scenes": 115,
-        "total_solos": 187,
-        "scene_ratio": 38,
+        "total_scenes": 141,
+        "total_solos": 199,
+        "scene_ratio": 41,
         "top_location": "town-square",
-        "top_pair": ["Dr. Julian Hale", "Mace MacAllister"],
-        "top_pair_count": 19
+        "top_pair": [
+          "Dr. Julian Hale",
+          "Mace MacAllister"
+        ],
+        "top_pair_count": 27
       },
       "character_pulse": [
-        { "character": "Dr. Julian Hale",   "scenes": 61, "solos": 14, "top_partner": "Mace MacAllister" },
-        { "character": "Mace MacAllister",  "scenes": 50, "solos": 22, "top_partner": "Dr. Julian Hale" },
-        { "character": "Jeffrey Goines",    "scenes": 43, "solos": 31, "top_partner": "Mace MacAllister" },
-        { "character": "Sister Lila Voss",  "scenes": 38, "solos": 19, "top_partner": "Dr. Julian Hale" },
-        { "character": "Link Brooks",       "scenes": 38, "solos": 25, "top_partner": "Dr. Julian Hale" },
-        { "character": "Mia Thompson",      "scenes": 36, "solos": 23, "top_partner": "Link Brooks" },
-        { "character": "Sophie Laurent",    "scenes": 28, "solos": 20, "top_partner": "Dr. Julian Hale" },
-        { "character": "Dr. Ellie Vance",   "scenes": 25, "solos": 33, "top_partner": "Link Brooks" }
+        {
+          "character": "Dr. Julian Hale",
+          "scenes": 52,
+          "solos": 10,
+          "top_partner": "Mace MacAllister"
+        },
+        {
+          "character": "Mace MacAllister",
+          "scenes": 51,
+          "solos": 13,
+          "top_partner": "Dr. Julian Hale"
+        },
+        {
+          "character": "Link Brooks",
+          "scenes": 48,
+          "solos": 23,
+          "top_partner": "Dr. Ellie Vance"
+        },
+        {
+          "character": "Jeffrey Goines",
+          "scenes": 43,
+          "solos": 35,
+          "top_partner": "Mace MacAllister"
+        },
+        {
+          "character": "Mia Thompson",
+          "scenes": 42,
+          "solos": 26,
+          "top_partner": "Link Brooks"
+        },
+        {
+          "character": "Sophie Laurent",
+          "scenes": 42,
+          "solos": 29,
+          "top_partner": "Jeffrey Goines"
+        },
+        {
+          "character": "Sister Lila",
+          "scenes": 35,
+          "solos": 4,
+          "top_partner": "Dr. Julian Hale"
+        },
+        {
+          "character": "Dr. Ellie Vance",
+          "scenes": 34,
+          "solos": 43,
+          "top_partner": "Link Brooks"
+        },
+        {
+          "character": "Sister Lila",
+          "scenes": 24,
+          "solos": 16,
+          "top_partner": "Sophie Laurent"
+        }
       ],
       "emergent_patterns": [
-        "Dr. Julian Hale became the town's social nucleus by Day 11, appearing in 5 of the top 10 most frequent character pairs — the highest of any character.",
+        "Dr. Julian Hale became the town's social nucleus by Day 11, appearing in 5 of the top 10 most frequent character pairs \u2014 the highest of any character.",
         "Jeffrey Goines disrupts without isolating. Despite erratic behavior, he accumulated 43 shared scenes across Week 1. The town does not eject him; it absorbs him.",
-        "Dr. Ellie Vance has the highest solo rate of any character — 57% of her ticks are spent alone. Her office is quiet. This is by design.",
-        "The Twisted Olive came alive at Day 9. Prior to the timing overhaul, Twisted Olive logged 3 scenes in Days 6–8 combined. Days 9–11: 26 scenes.",
-        "Town Square functions as the default corridor — characters pass through rather than linger. It leads all locations by raw count (48 scenes) but ranks lower in multi-tick stays."
+        "Dr. Ellie Vance has the highest solo rate of any character \u2014 57% of her ticks are spent alone. Her office is quiet. This is by design.",
+        "The Twisted Olive came alive at Day 9. Prior to the timing overhaul, Twisted Olive logged 3 scenes in Days 6\u20138 combined. Days 9\u201311: 26 scenes.",
+        "Town Square functions as the default corridor \u2014 characters pass through rather than linger. It leads all locations by raw count (48 scenes) but ranks lower in multi-tick stays."
       ]
     }
   ]
