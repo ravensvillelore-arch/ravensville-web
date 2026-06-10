@@ -71,7 +71,13 @@
           "top_partner": "Link Brooks"
         }
       ],
-      "emergent_patterns": []
+      "emergent_patterns": [
+        "Jeffrey Goines found Sophie Laurent. 59 shared scenes across Days 24–28 — the highest pair count in simulation history. After cycling through three different top partners in three weeks, he stopped cycling. Nobody told him to.",
+        "Jeffrey's solo rate fell to 1.3% — one solo tick in five days. Week 1: 81% solo. Week 2: 16%. Week 3: 10%. Week 4: near zero. The simulation did not ratchet this down. It arrived on its own.",
+        "Link Brooks had the biggest single-week swing of any character: from 50% solo rate in Week 3 to 8% in Week 4. His top partner became Sister Lila (43 scenes). Both Lila and Dr. Ellie Vance shifted their primary orbit toward Link in the same week. The town’s two most attentive characters turned toward the same person at the same time.",
+        "Vance Therapy quieted — 27 group scenes in Week 3, 16 in Week 4, a 40% drop. Either the town is healing, or it has found other rooms to do it in.",
+        "Town Square nearly caught the Twisted Olive: 50 group scenes vs 51. The narrowest gap between first and second location since the timing overhaul. Ravensville is decentralizing."
+      ]
     },
     {
       "week": 3,
@@ -145,7 +151,13 @@
           "top_partner": "Sister Lila"
         }
       ],
-      "emergent_patterns": []
+      "emergent_patterns": [
+        "Mia Thompson displaced Dr. Julian Hale as Sister Lila's primary orbit — 56 shared scenes, rising from a supporting role in prior weeks. Lila moved toward Mia because Mia kept showing up.",
+        "Mia Thompson became the connective tissue of Week 3 — top partner for both Sister Lila and Dr. Ellie Vance simultaneously. Nobody else has held that position for two of the town's three most social characters at once.",
+        "Dr. Ellie Vance's transformation is complete. Week 1: 56% of ticks spent alone. Week 3: 6 solos across 96 total scenes — a 6% solo rate. She is no longer the town's most isolated character. She is now one of its most present.",
+        "Link Brooks has the highest solo rate of any character in Week 3 at 50% — and the trend is worsening. Week 1: 23 solos. Week 2: 19. Week 3: 32. While everyone else was closing in, Link was pulling out.",
+        "Jeffrey Goines lost his Week 2 orbit around Dr. Ellie Vance and fragmented across the town. He appears in 7 of the top 8 most frequent pairs for the week. He is everywhere. He is attached to nothing."
+      ]
     },
     {
       "week": 2,
