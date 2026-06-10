@@ -138,7 +138,7 @@ const latestWeek = weeks[0];
     }
     .ratio-row {
       display: grid;
-      grid-template-columns: 60px 1fr 60px;
+      grid-template-columns: 60px 1fr 60px 100px;
       gap: 0.75rem;
       align-items: center;
     }
@@ -184,6 +184,11 @@ const latestWeek = weeks[0];
       font-family: var(--mono);
       font-size: 0.75rem;
       color: var(--purple-hi);
+    }
+    .ratio-weather {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: var(--mist);
     }
     .target-line {
       font-family: var(--mono);
@@ -521,6 +526,7 @@ const latestWeek = weeks[0];
               </div>
             </div>
             <span class="ratio-pct">{d.scene_pct}%</span>
+            <span class="ratio-weather">{d.weather}</span>
           </div>
         );
       })}

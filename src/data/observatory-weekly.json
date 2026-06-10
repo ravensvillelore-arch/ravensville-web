@@ -8,8 +8,7 @@
         25,
         26,
         27,
-        28,
-        29
+        28
       ],
       "vitals": {
         "total_scenes": 167,
@@ -276,16 +275,16 @@
           "top_partner": "Mace MacAllister"
         },
         {
-          "character": "Mia Thompson",
-          "scenes": 42,
-          "solos": 26,
-          "top_partner": "Link Brooks"
-        },
-        {
           "character": "Sophie Laurent",
           "scenes": 42,
           "solos": 29,
           "top_partner": "Jeffrey Goines"
+        },
+        {
+          "character": "Mia Thompson",
+          "scenes": 42,
+          "solos": 26,
+          "top_partner": "Link Brooks"
         },
         {
           "character": "Sister Lila",
