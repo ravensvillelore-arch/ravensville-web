@@ -1,6 +1,6 @@
 {
   "simStart": "May 2026",
-  "currentDay": 36,
+  "currentDay": 37,
   "currentSeason": "Winter",
   "dayData": [
     {
@@ -215,100 +215,107 @@
     },
     {
       "day": 36,
-      "ticks": 15,
-      "scenes": 35,
+      "ticks": 16,
+      "scenes": 38,
       "solos": 14,
-      "scene_pct": 71
+      "scene_pct": 73
+    },
+    {
+      "day": 37,
+      "ticks": 15,
+      "scenes": 28,
+      "solos": 21,
+      "scene_pct": 57
     }
   ],
-  "totalScenes": 955,
-  "totalSolos": 656,
-  "totalTicks": 524,
+  "totalScenes": 986,
+  "totalSolos": 677,
+  "totalTicks": 540,
   "overallRatio": 59,
   "topPairs": [
     {
       "a": "Jeffrey Goines",
       "b": "Sister Lila",
-      "count": 211,
+      "count": 224,
       "chemistry": 7.58
     },
     {
       "a": "Jeffrey Goines",
       "b": "Sophie Laurent",
-      "count": 207,
-      "chemistry": 7.78
+      "count": 213,
+      "chemistry": 7.83
     },
     {
       "a": "Jeffrey Goines",
       "b": "Mace MacAllister",
-      "count": 196,
-      "chemistry": 7.78
-    },
-    {
-      "a": "Mia Thompson",
-      "b": "Sister Lila",
-      "count": 188,
-      "chemistry": 8.58
+      "count": 202,
+      "chemistry": 7.81
     },
     {
       "a": "Jeffrey Goines",
       "b": "Dr. Julian Hale",
-      "count": 186,
-      "chemistry": 7.76
+      "count": 199,
+      "chemistry": 7.78
+    },
+    {
+      "a": "Dr. Julian Hale",
+      "b": "Sister Lila",
+      "count": 195,
+      "chemistry": 8.66
+    },
+    {
+      "a": "Mia Thompson",
+      "b": "Sister Lila",
+      "count": 193,
+      "chemistry": 8.6
     },
     {
       "a": "Sister Lila",
       "b": "Sophie Laurent",
-      "count": 184,
-      "chemistry": 8.53
-    },
-    {
-      "a": "Dr. Julian Hale",
-      "b": "Sister Lila",
-      "count": 184,
-      "chemistry": 8.65
+      "count": 190,
+      "chemistry": 8.56
     },
     {
       "a": "Mace MacAllister",
       "b": "Sister Lila",
-      "count": 174,
-      "chemistry": 8.57
-    },
-    {
-      "a": "Dr. Julian Hale",
-      "b": "Mace MacAllister",
-      "count": 171,
-      "chemistry": 9.03
+      "count": 179,
+      "chemistry": 8.59
     },
     {
       "a": "Dr. Ellie Vance",
       "b": "Jeffrey Goines",
-      "count": 169,
-      "chemistry": 7.8
+      "count": 179,
+      "chemistry": 7.82
+    },
+    {
+      "a": "Dr. Julian Hale",
+      "b": "Mace MacAllister",
+      "count": 177,
+      "chemistry": 9.06
     }
   ],
   "locationData": [
     {
-      "name": "town-square",
-      "scenes": 275
+      "name": "twisted-olive",
+      "scenes": 283
     },
     {
-      "name": "twisted-olive",
-      "scenes": 273
+      "name": "town-square",
+      "scenes": 279
     },
     {
       "name": "brewsome",
-      "scenes": 207
+      "scenes": 220
     },
     {
       "name": "vance-therapy",
-      "scenes": 141
+      "scenes": 145
     },
     {
       "name": "the-park",
       "scenes": 59
     }
   ],
-  "maxLocationScenes": 275,
+  "maxLocationScenes": 283,
   "maxDayScenes": 49
 }
