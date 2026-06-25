@@ -1,6 +1,6 @@
 {
   "simStart": "May 2026",
-  "currentDay": 44,
+  "currentDay": 45,
   "currentSeason": "Winter",
   "dayData": [
     {
@@ -8,363 +8,410 @@
       "ticks": 24,
       "scenes": 12,
       "solos": 46,
-      "scene_pct": 21
+      "scene_pct": 21,
+      "weather": "overcast, cool"
     },
     {
       "day": 7,
       "ticks": 24,
       "scenes": 15,
       "solos": 39,
-      "scene_pct": 28
+      "scene_pct": 28,
+      "weather": "overcast, cool"
     },
     {
       "day": 8,
       "ticks": 24,
       "scenes": 14,
       "solos": 41,
-      "scene_pct": 25
+      "scene_pct": 25,
+      "weather": "overcast, cool"
     },
     {
       "day": 9,
       "ticks": 21,
       "scenes": 25,
       "solos": 30,
-      "scene_pct": 45
+      "scene_pct": 45,
+      "weather": "overcast, cool"
     },
     {
       "day": 10,
       "ticks": 16,
       "scenes": 35,
       "solos": 25,
-      "scene_pct": 58
+      "scene_pct": 58,
+      "weather": "overcast, cool"
     },
     {
       "day": 11,
       "ticks": 16,
       "scenes": 40,
       "solos": 18,
-      "scene_pct": 69
+      "scene_pct": 69,
+      "weather": "overcast, cool"
     },
     {
       "day": 12,
       "ticks": 16,
       "scenes": 34,
       "solos": 27,
-      "scene_pct": 56
+      "scene_pct": 56,
+      "weather": "overcast, cool"
     },
     {
       "day": 13,
       "ticks": 16,
       "scenes": 36,
       "solos": 27,
-      "scene_pct": 57
+      "scene_pct": 57,
+      "weather": "overcast, cool"
     },
     {
       "day": 14,
       "ticks": 16,
       "scenes": 34,
       "solos": 27,
-      "scene_pct": 56
+      "scene_pct": 56,
+      "weather": "overcast, cool"
     },
     {
       "day": 15,
       "ticks": 16,
       "scenes": 35,
       "solos": 22,
-      "scene_pct": 61
+      "scene_pct": 61,
+      "weather": "light rain"
     },
     {
       "day": 16,
       "ticks": 16,
       "scenes": 30,
       "solos": 14,
-      "scene_pct": 68
+      "scene_pct": 68,
+      "weather": "bright but cold"
     },
     {
       "day": 17,
       "ticks": 16,
       "scenes": 36,
       "solos": 20,
-      "scene_pct": 64
+      "scene_pct": 64,
+      "weather": "overcast, cool"
     },
     {
       "day": 18,
       "ticks": 16,
       "scenes": 30,
       "solos": 16,
-      "scene_pct": 65
+      "scene_pct": 65,
+      "weather": "crisp and clear"
     },
     {
       "day": 19,
       "ticks": 16,
       "scenes": 32,
       "solos": 18,
-      "scene_pct": 64
+      "scene_pct": 64,
+      "weather": "light rain"
     },
     {
       "day": 20,
       "ticks": 16,
       "scenes": 32,
       "solos": 20,
-      "scene_pct": 62
+      "scene_pct": 62,
+      "weather": "breezy with scattered cloud"
     },
     {
       "day": 21,
       "ticks": 16,
       "scenes": 32,
       "solos": 13,
-      "scene_pct": 71
+      "scene_pct": 71,
+      "weather": "crisp and clear"
     },
     {
       "day": 22,
       "ticks": 16,
       "scenes": 28,
       "solos": 20,
-      "scene_pct": 58
+      "scene_pct": 58,
+      "weather": "heavy rain and wind"
     },
     {
       "day": 23,
       "ticks": 16,
       "scenes": 33,
       "solos": 17,
-      "scene_pct": 66
+      "scene_pct": 66,
+      "weather": "crisp and clear"
     },
     {
       "day": 24,
       "ticks": 16,
       "scenes": 30,
       "solos": 19,
-      "scene_pct": 61
+      "scene_pct": 61,
+      "weather": "breezy with scattered cloud"
     },
     {
       "day": 25,
       "ticks": 16,
       "scenes": 32,
       "solos": 21,
-      "scene_pct": 60
+      "scene_pct": 60,
+      "weather": "overcast, cool"
     },
     {
       "day": 26,
       "ticks": 16,
       "scenes": 35,
       "solos": 16,
-      "scene_pct": 69
+      "scene_pct": 69,
+      "weather": "crisp and clear"
     },
     {
       "day": 27,
       "ticks": 16,
       "scenes": 34,
       "solos": 13,
-      "scene_pct": 72
+      "scene_pct": 72,
+      "weather": "bright but cold"
     },
     {
       "day": 28,
       "ticks": 16,
       "scenes": 36,
       "solos": 19,
-      "scene_pct": 65
+      "scene_pct": 65,
+      "weather": "light rain"
     },
     {
       "day": 29,
       "ticks": 16,
       "scenes": 24,
       "solos": 26,
-      "scene_pct": 48
+      "scene_pct": 48,
+      "weather": "light rain"
     },
     {
       "day": 30,
       "ticks": 16,
       "scenes": 29,
       "solos": 9,
-      "scene_pct": 76
+      "scene_pct": 76,
+      "weather": "light snow"
     },
     {
       "day": 31,
       "ticks": 16,
       "scenes": 35,
       "solos": 13,
-      "scene_pct": 73
+      "scene_pct": 73,
+      "weather": "clear and freezing"
     },
     {
       "day": 32,
       "ticks": 16,
       "scenes": 34,
       "solos": 12,
-      "scene_pct": 74
+      "scene_pct": 74,
+      "weather": "light snow"
     },
     {
       "day": 33,
       "ticks": 16,
       "scenes": 31,
       "solos": 12,
-      "scene_pct": 72
+      "scene_pct": 72,
+      "weather": "clear and freezing"
     },
     {
       "day": 34,
       "ticks": 16,
       "scenes": 37,
       "solos": 24,
-      "scene_pct": 61
+      "scene_pct": 61,
+      "weather": "light snow"
     },
     {
       "day": 35,
       "ticks": 16,
       "scenes": 30,
       "solos": 18,
-      "scene_pct": 62
+      "scene_pct": 62,
+      "weather": "sleet and wind"
     },
     {
       "day": 36,
-      "ticks": 16,
-      "scenes": 38,
-      "solos": 14,
-      "scene_pct": 73
+      "ticks": 14,
+      "scenes": 33,
+      "solos": 12,
+      "scene_pct": 73,
+      "weather": "grey and still"
     },
     {
       "day": 37,
       "ticks": 16,
-      "scenes": 29,
-      "solos": 24,
-      "scene_pct": 55
+      "scenes": 0,
+      "solos": 0,
+      "scene_pct": 0,
+      "weather": "light snow"
     },
     {
       "day": 38,
       "ticks": 16,
-      "scenes": 30,
-      "solos": 11,
-      "scene_pct": 73
+      "scenes": 0,
+      "solos": 0,
+      "scene_pct": 0,
+      "weather": "overcast, damp"
     },
     {
       "day": 39,
       "ticks": 16,
-      "scenes": 30,
-      "solos": 15,
-      "scene_pct": 67
+      "scenes": 0,
+      "solos": 0,
+      "scene_pct": 0,
+      "weather": "cold snap, pipes aching"
     },
     {
       "day": 40,
       "ticks": 16,
-      "scenes": 19,
-      "solos": 25,
-      "scene_pct": 43
+      "scenes": 0,
+      "solos": 0,
+      "scene_pct": 0,
+      "weather": "overcast, damp"
     },
     {
       "day": 41,
       "ticks": 16,
-      "scenes": 27,
-      "solos": 22,
-      "scene_pct": 55
+      "scenes": 0,
+      "solos": 0,
+      "scene_pct": 0,
+      "weather": "light snow"
     },
     {
       "day": 42,
       "ticks": 16,
-      "scenes": 27,
-      "solos": 16,
-      "scene_pct": 63
+      "scenes": 0,
+      "solos": 0,
+      "scene_pct": 0,
+      "weather": "cold snap, pipes aching"
     },
     {
       "day": 43,
       "ticks": 16,
-      "scenes": 33,
-      "solos": 13,
-      "scene_pct": 72
+      "scenes": 0,
+      "solos": 0,
+      "scene_pct": 0,
+      "weather": "clear and freezing"
     },
     {
       "day": 44,
+      "ticks": 16,
+      "scenes": 0,
+      "solos": 0,
+      "scene_pct": 0,
+      "weather": "overcast, damp"
+    },
+    {
+      "day": 45,
       "ticks": 15,
-      "scenes": 24,
-      "solos": 13,
-      "scene_pct": 65
+      "scenes": 0,
+      "solos": 0,
+      "scene_pct": 0,
+      "weather": "bitter cold, heavy frost"
     }
   ],
-  "totalScenes": 1177,
-  "totalSolos": 795,
-  "totalTicks": 652,
-  "overallRatio": 60,
+  "totalScenes": 953,
+  "totalSolos": 654,
+  "totalTicks": 666,
+  "overallRatio": 59,
   "topPairs": [
     {
       "a": "Jeffrey Goines",
       "b": "Sister Lila",
-      "count": 289,
-      "chemistry": 7.76
+      "count": 299,
+      "chemistry": 7.74
     },
     {
       "a": "Dr. Ellie Vance",
       "b": "Jeffrey Goines",
-      "count": 274,
-      "chemistry": 7.85
+      "count": 286,
+      "chemistry": 7.8
     },
     {
       "a": "Jeffrey Goines",
-      "b": "Dr. Julian Hale",
-      "count": 270,
+      "b": "Mace MacAllister",
+      "count": 275,
       "chemistry": 7.9
     },
     {
       "a": "Mia Thompson",
       "b": "Sister Lila",
-      "count": 269,
-      "chemistry": 8.65
+      "count": 275,
+      "chemistry": 8.64
     },
     {
       "a": "Jeffrey Goines",
-      "b": "Mace MacAllister",
-      "count": 261,
-      "chemistry": 7.97
+      "b": "Dr. Julian Hale",
+      "count": 272,
+      "chemistry": 7.88
     },
     {
       "a": "Dr. Julian Hale",
       "b": "Sister Lila",
-      "count": 257,
-      "chemistry": 8.74
+      "count": 265,
+      "chemistry": 8.71
     },
     {
       "a": "Jeffrey Goines",
       "b": "Sophie Laurent",
-      "count": 254,
-      "chemistry": 7.99
+      "count": 264,
+      "chemistry": 7.96
     },
     {
       "a": "Sister Lila",
       "b": "Sophie Laurent",
-      "count": 238,
-      "chemistry": 8.69
+      "count": 246,
+      "chemistry": 8.67
     },
     {
       "a": "Dr. Julian Hale",
       "b": "Mia Thompson",
-      "count": 237,
-      "chemistry": 9.32
+      "count": 243,
+      "chemistry": 9.27
     },
     {
       "a": "Mace MacAllister",
       "b": "Mia Thompson",
-      "count": 236,
-      "chemistry": 9.18
+      "count": 242,
+      "chemistry": 9.16
     }
   ],
   "locationData": [
     {
-      "name": "twisted-olive",
-      "scenes": 337
+      "name": "town-square",
+      "scenes": 274
     },
     {
-      "name": "town-square",
-      "scenes": 336
+      "name": "twisted-olive",
+      "scenes": 272
     },
     {
       "name": "brewsome",
-      "scenes": 257
+      "scenes": 207
     },
     {
       "name": "vance-therapy",
-      "scenes": 176
+      "scenes": 141
     },
     {
       "name": "the-park",
-      "scenes": 71
+      "scenes": 59
     }
   ],
-  "maxLocationScenes": 337,
-  "maxDayScenes": 37
+  "maxLocationScenes": 274,
+  "maxDayScenes": 1
 }
