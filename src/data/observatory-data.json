@@ -340,14 +340,20 @@
     {
       "a": "Jeffrey Goines",
       "b": "Sister Lila",
-      "count": 308,
-      "chemistry": 7.66
+      "count": 311,
+      "chemistry": 7.64
     },
     {
       "a": "Dr. Ellie Vance",
       "b": "Jeffrey Goines",
-      "count": 297,
-      "chemistry": 7.69
+      "count": 299,
+      "chemistry": 7.68
+    },
+    {
+      "a": "Mia Thompson",
+      "b": "Sister Lila",
+      "count": 281,
+      "chemistry": 8.6
     },
     {
       "a": "Jeffrey Goines",
@@ -356,34 +362,28 @@
       "chemistry": 7.86
     },
     {
-      "a": "Mia Thompson",
-      "b": "Sister Lila",
-      "count": 279,
-      "chemistry": 8.62
-    },
-    {
       "a": "Jeffrey Goines",
       "b": "Dr. Julian Hale",
-      "count": 272,
-      "chemistry": 7.88
+      "count": 273,
+      "chemistry": 7.87
     },
     {
       "a": "Dr. Julian Hale",
       "b": "Sister Lila",
-      "count": 268,
+      "count": 269,
       "chemistry": 8.68
     },
     {
       "a": "Jeffrey Goines",
       "b": "Sophie Laurent",
-      "count": 266,
-      "chemistry": 7.93
+      "count": 267,
+      "chemistry": 7.92
     },
     {
       "a": "Sister Lila",
       "b": "Sophie Laurent",
-      "count": 247,
-      "chemistry": 8.65
+      "count": 248,
+      "chemistry": 8.64
     },
     {
       "a": "Dr. Julian Hale",
