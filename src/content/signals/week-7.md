@@ -11,11 +11,11 @@ days:
 - 45
 - 46
 pubDate: '2026-06-26'
-title: 'TODO: Add title'
-summary: 'TODO: Add summary'
+title: "Link's Delivery, Jeffrey's Fog"
+summary: 'Jeffrey Goines spiraled about germs and facades while Linus Brooks arrived with a mystery package for Dr. Vance.'
 location: twisted-olive
 sim_day: 42
-setup: 'TODO: Add setup paragraph.'
+setup: 'A cold evening pushed the usual crowd into the Twisted Olive, where Mia Thompson dispensed drinks and warmth in equal measure. The conversation ran philosophical — Sister Lila on connection, Dr. Vance on control, Julian threading between them with his usual diplomatic calm. Jeffrey Goines was in full performance mode, oscillating between conspiracy theory and something that sounded almost like grief. Then Link walked in with a package.'
 exchanges:
 - character: Mia Thompson
   time_label: Winter, Day 42 - Evening
@@ -77,5 +77,5 @@ exchanges:
 - character: Mia Thompson
   time_label: Winter, Day 42 - Evening
   line: (big smile) Oh, y'all, let's get warmed up in here! Link, sweetie, what's the story with the package? You're as tight-lipped as Jeffrey, and I'm fascinated! (winking) And Dr. Vance, honey, you look like a kid on Christmas morning. Spill the beans, what's inside? (laughing) And Mace, darling, your eyes are scanning the room like you're trying to solve a puzzle. Am I right?
-closing: 'TODO: Add closing line.'
+closing: 'The package required a signature. Its contents were not discussed.'
 ---
