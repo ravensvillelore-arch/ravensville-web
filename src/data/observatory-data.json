@@ -1,6 +1,6 @@
 {
   "simStart": "May 2026",
-  "currentDay": 45,
+  "currentDay": 46,
   "currentSeason": "Winter",
   "dayData": [
     {
@@ -254,104 +254,112 @@
     {
       "day": 37,
       "ticks": 16,
-      "scenes": 0,
-      "solos": 0,
-      "scene_pct": 0,
+      "scenes": 29,
+      "solos": 24,
+      "scene_pct": 55,
       "weather": "light snow"
     },
     {
       "day": 38,
       "ticks": 16,
-      "scenes": 0,
-      "solos": 0,
-      "scene_pct": 0,
+      "scenes": 30,
+      "solos": 11,
+      "scene_pct": 73,
       "weather": "overcast, damp"
     },
     {
       "day": 39,
       "ticks": 16,
-      "scenes": 0,
-      "solos": 0,
-      "scene_pct": 0,
+      "scenes": 30,
+      "solos": 15,
+      "scene_pct": 67,
       "weather": "cold snap, pipes aching"
     },
     {
       "day": 40,
       "ticks": 16,
-      "scenes": 0,
-      "solos": 0,
-      "scene_pct": 0,
+      "scenes": 19,
+      "solos": 25,
+      "scene_pct": 43,
       "weather": "overcast, damp"
     },
     {
       "day": 41,
       "ticks": 16,
-      "scenes": 0,
-      "solos": 0,
-      "scene_pct": 0,
+      "scenes": 27,
+      "solos": 22,
+      "scene_pct": 55,
       "weather": "light snow"
     },
     {
       "day": 42,
       "ticks": 16,
-      "scenes": 0,
-      "solos": 0,
-      "scene_pct": 0,
+      "scenes": 27,
+      "solos": 16,
+      "scene_pct": 63,
       "weather": "cold snap, pipes aching"
     },
     {
       "day": 43,
       "ticks": 16,
-      "scenes": 0,
-      "solos": 0,
-      "scene_pct": 0,
+      "scenes": 33,
+      "solos": 13,
+      "scene_pct": 72,
       "weather": "clear and freezing"
     },
     {
       "day": 44,
       "ticks": 16,
-      "scenes": 0,
-      "solos": 0,
-      "scene_pct": 0,
+      "scenes": 26,
+      "solos": 13,
+      "scene_pct": 67,
       "weather": "overcast, damp"
     },
     {
       "day": 45,
-      "ticks": 15,
-      "scenes": 0,
-      "solos": 0,
-      "scene_pct": 0,
+      "ticks": 16,
+      "scenes": 33,
+      "solos": 12,
+      "scene_pct": 73,
       "weather": "bitter cold, heavy frost"
+    },
+    {
+      "day": 46,
+      "ticks": 12,
+      "scenes": 28,
+      "solos": 1,
+      "scene_pct": 97,
+      "weather": "grey and still"
     }
   ],
-  "totalScenes": 953,
-  "totalSolos": 654,
-  "totalTicks": 666,
-  "overallRatio": 59,
+  "totalScenes": 1235,
+  "totalSolos": 806,
+  "totalTicks": 679,
+  "overallRatio": 61,
   "topPairs": [
     {
       "a": "Jeffrey Goines",
       "b": "Sister Lila",
-      "count": 299,
-      "chemistry": 7.74
+      "count": 308,
+      "chemistry": 7.66
     },
     {
       "a": "Dr. Ellie Vance",
       "b": "Jeffrey Goines",
-      "count": 286,
-      "chemistry": 7.8
+      "count": 297,
+      "chemistry": 7.69
     },
     {
       "a": "Jeffrey Goines",
       "b": "Mace MacAllister",
-      "count": 275,
-      "chemistry": 7.9
+      "count": 279,
+      "chemistry": 7.86
     },
     {
       "a": "Mia Thompson",
       "b": "Sister Lila",
-      "count": 275,
-      "chemistry": 8.64
+      "count": 279,
+      "chemistry": 8.62
     },
     {
       "a": "Jeffrey Goines",
@@ -362,56 +370,56 @@
     {
       "a": "Dr. Julian Hale",
       "b": "Sister Lila",
-      "count": 265,
-      "chemistry": 8.71
+      "count": 268,
+      "chemistry": 8.68
     },
     {
       "a": "Jeffrey Goines",
       "b": "Sophie Laurent",
-      "count": 264,
-      "chemistry": 7.96
+      "count": 266,
+      "chemistry": 7.93
     },
     {
       "a": "Sister Lila",
       "b": "Sophie Laurent",
-      "count": 246,
-      "chemistry": 8.67
+      "count": 247,
+      "chemistry": 8.65
     },
     {
       "a": "Dr. Julian Hale",
       "b": "Mia Thompson",
-      "count": 243,
-      "chemistry": 9.27
+      "count": 247,
+      "chemistry": 9.22
     },
     {
       "a": "Mace MacAllister",
       "b": "Mia Thompson",
-      "count": 242,
-      "chemistry": 9.16
+      "count": 245,
+      "chemistry": 9.12
     }
   ],
   "locationData": [
     {
       "name": "town-square",
-      "scenes": 274
+      "scenes": 353
     },
     {
       "name": "twisted-olive",
-      "scenes": 272
+      "scenes": 353
     },
     {
       "name": "brewsome",
-      "scenes": 207
+      "scenes": 268
     },
     {
       "name": "vance-therapy",
-      "scenes": 141
+      "scenes": 187
     },
     {
       "name": "the-park",
-      "scenes": 59
+      "scenes": 74
     }
   ],
-  "maxLocationScenes": 274,
-  "maxDayScenes": 1
+  "maxLocationScenes": 353,
+  "maxDayScenes": 29
 }
