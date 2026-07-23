@@ -11,11 +11,11 @@ days:
 - 59
 - 60
 pubDate: '2026-07-10'
-title: 'TODO: Add title'
-summary: 'TODO: Add summary'
+title: Conspiracy in the Square
+summary: Jeffrey's outburst sparks tension.
 location: town-square
 sim_day: 53
-setup: 'TODO: Add setup paragraph.'
+setup: In the town square, Sister Lila Voss and Jeffrey Goines crossed paths. The air was electric with anticipation. Something was about to unfold. The question was, what?
 exchanges:
 - character: Sister Lila Voss
   time_label: Winter, Day 53 - Midday
@@ -59,5 +59,5 @@ exchanges:
 - character: Sister Lila Voss
   time_label: Winter, Day 53 - Early Evening
   line: The evening air carries the whispers of Ravensville's unrest, doesn't it, Dr. Vance, Link? The currents of change are stirring, and I sense that we are all being drawn into a delicate dance of discovery. Jeffrey's departure seems to have left a lingering question in the air... what is it that we are all waiting for, hmm? As I gaze around this familiar town square, I feel an gentle tug, a reminder that my own journey is beckoning me toward the Twisted Olive, where the evening's rhythms await.
-closing: 'TODO: Add closing line.'
+closing: Jeffrey departed, chaos lingering.
 ---

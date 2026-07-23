@@ -12,11 +12,11 @@ days:
 - 66
 - 67
 pubDate: '2026-07-17'
-title: 'TODO: Add title'
-summary: 'TODO: Add summary'
+title: Confrontation in Town Square
+summary: Jeffrey Goines sparks tension
 location: town-square
 sim_day: 66
-setup: 'TODO: Add setup paragraph.'
+setup: In the heart of Ravensville, a chance encounter sets off a chain reaction. The town square, usually a hub of calm activity, becomes a stage for confrontation. Sister Lila Voss and Dr. Julian Hale are drawn into Jeffrey Goines' erratic orbit. As the conversation unfolds, the lines between reality and paranoia begin to blur.
 exchanges:
 - character: Jeffrey Goines
   time_label: Early Spring, Day 66 - Early Morning
@@ -69,5 +69,5 @@ exchanges:
 - character: Sister Lila Voss
   time_label: Early Spring, Day 66 - Afternoon
   line: The breeze carries the whispers of Ravensville, and I sense a stirring in the current. Dr. Hale, Mace, your presence here is not a coincidence, is it? The threads of connection are weaving together, forming a tapestry of belonging. I see the way you both look at me, with a mix of curiosity and guardedness, and I wonder... what is it that Ravensville is asking of us in this moment?
-closing: 'TODO: Add closing line.'
+closing: Chaos ensues, predictably
 ---

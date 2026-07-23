@@ -11,11 +11,11 @@ days:
 - 52
 - 53
 pubDate: '2026-07-03'
-title: 'TODO: Add title'
-summary: 'TODO: Add summary'
+title: Ravensville's Whispering Heart
+summary: Jeffrey's outburst disrupts town square.
 location: town-square
 sim_day: 51
-setup: 'TODO: Add setup paragraph.'
+setup: In the stillness of autumn, Ravensville's town square is abuzz with unspoken tensions. Sister Lila Voss and Jeffrey Goines cross paths, sparking a conversation that exposes the underlying currents of the town. As they speak, the threads of connection between Ravensville's inhabitants begin to weave together. What secrets will be revealed in this moment of collective breath?
 exchanges:
 - character: Sister Lila Voss
   time_label: Winter, Day 51 - Morning
@@ -71,5 +71,5 @@ exchanges:
 - character: Sister Lila Voss
   time_label: Winter, Day 51 - Early Evening
   line: The evening air is heavy with unspoken intentions, isn't it, Dr. Vance, Link? I sense that Ravensville is asking for a gentle unraveling of the threads that bind us. Jeffrey's hurried departure seems to have left a ripple in the stillness. (pausing to gaze at Dr. Ellie Vance and Linus "Link" Brooks) Tell me, what is it that the current is whispering to you both in this moment?
-closing: 'TODO: Add closing line.'
+closing: Jeffrey flees to the Twisted Olive.
 ---
