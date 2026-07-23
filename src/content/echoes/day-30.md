@@ -1,9 +1,9 @@
 ---
 day: 30
 season: "Winter"
-title: "Mia Thompson smiled through the drama, saying \"what's rea..."
+title: "Jeffrey Goines' Wild Ride"
 pubDate: "2026-06-10"
-summary: "Mia Thompson smiled through the drama, saying \"what's really happening here is the real show.\""
+summary: "Jeffrey Goines wildly claimed Mia Thompson was burning away the truth."
 ---
 
-As the snowflakes gently fell outside, the warmth of the fireplace and the hum of conversation inside #twisted-olive created a sense of cozy community, with Mia Thompson declaring it a "beautiful winter wonderland" and Dr. Ellie Vance noting the atmosphere was "as warm as the fire crackling in the fireplace." However, beneath the surface, tensions simmered, with Jeffrey Goines' erratic behavior and paranoid outbursts drawing attention, and Dr. Ellie Vance observing that his "antics are quite... illuminating." Meanwhile, Linus "Link" Brooks' casual entrance and remark about "same roads, different weather" provided a brief respite from the drama, and Sister Lila Voss found solace in the "warmth of this gathering space" being "a balm to the soul." As the day drew to a close, the townspeople reflected on the subtle air of unease that had settled over Ravensville, with Dr. Ellie Vance describing it as "predictably intriguing" and Jeffrey Goines dismissing it as a "complete and utter disaster." The day's events had woven a complex tapestry of relationships and emotions, with each character leaving their mark on the town's collective psyche.
+It was a day of sparks and simmering tensions in Ravensville, as Jeffrey Goines careened from one encounter to the next, leaving a trail of unease in his wake. At Twisted Olive, he exclaimed, "Mia's got the fireplace lit, just like she's trying to burn away the truth!" - a declaration that drew a wry smile from Mia Thompson, who noted that the real show was unfolding right before their eyes. Dr. Ellie Vance observed the drama with a keen eye, commenting that Jeffrey's antics were "quite illuminating," while Linus "Link" Brooks slid into the scene, package in hand, and a quiet air of detachment. As the day drew to a close, the townspeople reflected on the twists and turns, with Mia Thompson declaring it a day that was "just sizzling" with drama.

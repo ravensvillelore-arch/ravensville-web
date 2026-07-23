@@ -1,9 +1,9 @@
 ---
 day: 40
 season: "Winter"
-title: "Sophie Laurent offered a fresh pot of French roast coffee..."
+title: "Sophie's Dreary Day"
 pubDate: "2026-06-20"
-summary: "Sophie Laurent offered a fresh pot of French roast coffee to calm the nerves of her friends."
+summary: "Sophie Laurent worried about the weather affecting her shop."
 ---
 
-As the dreary weather cast its shadow over Ravensville, Sophie Laurent's warm demeanor and Dr. Ellie Vance's neutral expression set the tone for a day of introspection and connection. In Dr. Vance's therapy sessions, Sophie found solace in discussing her anxiety, while Mia Thompson's big smile and infectious energy helped create a sense of community, as she noted, "I just love seeing people connect and work through their stuff." Meanwhile, Jeffrey Goines's frantic glances and twitching betrayed his own struggles, and his interactions with Mia and Sister Lila hinted at underlying tensions. As the day drew to a close, Dr. Ellie Vance observed the collective unease beneath the town's tranquil façade, sensing the complex web of emotions that bound its residents together. In the end, it was a day of gentle moments and subtle revelations, as embodied by Sophie's gesture of offering a fresh pot of French roast coffee to her friends at Brewsome.
+As the dreary morning unfolded in Ravensville, Sophie Laurent's thoughts turned to warm pastries at Brewsome, a notion that caught Dr. Ellie Vance's attention, though she had already had her caffeine fix. The two later converged at Dr. Vance's therapy session, where Sophie struggled to focus, worrying about her shop and the weather, while Mia Thompson beamed with excitement, sensing the contagious anxiety in the room. As the day drew to a close, Sophie welcomed the gathering at Brewsome, offering a fresh pot of French roast, and Dr. Ellie Vance observed the group with a discerning eye, attuned to the collective unease beneath the town's tranquil façade. The evening's conversations wove a complex tapestry of connections and tensions, with Dr. Julian Hale noting the perfect atmosphere for discussion at Twisted Olive. As the night wore on, the townspeople found solace in each other's company, seeking to counterbalance the weight of their individual struggles.

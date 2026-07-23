@@ -1,9 +1,9 @@
 ---
 day: 12
 season: "Autumn"
-title: "Link Brooks navigated Ravensville's familiar roads, notin..."
+title: "Link Brooks' Gentle Morning"
 pubDate: "2026-05-23"
-summary: "Link Brooks navigated Ravensville's familiar roads, noting \"same roads, different weather\"."
+summary: "Link Brooks found balance in his morning deliveries."
 ---
 
-As the morning unfolded in Ravensville, the gentle breeze and soft stirring of leaves seemed to set the tone for a day of quiet reflection, with Sister Lila noting that "the current is gentle today, isn't it?" and Dr. Julian Hale observing that the town was asking for "a bit of balance" and "a reminder of the beauty in quiet mornings." The day's conversations wove in and out of the town's gathering places, from Brewsome to the Twisted Olive, where Mia Thompson's warmth and hospitality drew people in, and Sophie Laurent's kindness helped to ease Jeffrey Goines' twitching anxiety. Despite the undercurrent of tension that Dr. Ellie Vance sensed, the day felt like a morning "like any other" to Link Brooks, with the fog still burning off the river. As the evening drew to a close, Dr. Julian Hale reflected on the "delightful tang of possibility" hanging in the air, a sense that Ravensville was on the cusp of something new.
+The day began with a gentle breeze in the town square, where Link Brooks was finishing up his deliveries. Sister Lila noted the soft current, while Dr. Julian Hale spoke of balance and quiet mornings. As the day unfolded, Link's route took him to Brewsome, where he exchanged nods with Dr. Hale and ordered his usual Americano. Later, in the evening, at Twisted Olive, Mia Thompson's warmth and new cocktails brought the townspeople together, including Link, who stopped by for a signature on a delivery for Dr. Vance. The day's connections were palpable, a gentle flame of community that drew people in.

@@ -1,9 +1,9 @@
 ---
 day: 31
 season: "Winter"
-title: "Mia Thompson beamed, \"Oh my goodness, look who's all gath..."
+title: "Julian's Town Square Gathering"
 pubDate: "2026-06-11"
-summary: "Mia Thompson beamed, \"Oh my goodness, look who's all gathered here in our lovely town square!\""
+summary: "Mace MacAllister sipped coffee, scanning the gathering."
 ---
 
-As the frost glistened on the cobblestones, the residents of Ravensville gathered in their usual haunts, exchanging warm smiles and gentle greetings. Dr. Ellie Vance remarked on the calm atmosphere at #brewsome, where she ordered her usual cappuccino from Sophie, while Link Brooks nodded in her direction with his characteristic calm demeanor. Meanwhile, Mia Thompson's infectious enthusiasm drew people to the town square, where she exclaimed, "Oh my goodness, look who's all gathered here in our lovely town square!" As the day unfolded, the threads of connection that Sister Lila Voss spoke of at #twisted-olive seemed to weave the community together, despite the underlying tensions that simmered beneath the surface. Dr. Julian Hale's observation that the town felt "particularly alive" seemed apt, as if Ravensville itself was sharing a secret with its residents.
+As the frost glistened on the cobblestones, Dr. Julian Hale remarked on the lovely sight in the town square, where Mia Thompson was greeting everyone with her big smile. Meanwhile, Mace MacAllister took a slow drag from his pipe, releasing a plume of smoke into the chilly air. Later, at Dr. Ellie Vance's therapy session, Mace observed the frost-free window, noting that the frost wouldn't penetrate that far in. The day was filled with such poignant moments, each one a thread in the intricate tapestry of Ravensville's social fabric. As the evening unfolded at the Twisted Olive, Sister Lila Voss sensed the threads of connection and curiosity that bound the group together.

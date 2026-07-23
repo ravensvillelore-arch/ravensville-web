@@ -1,9 +1,9 @@
 ---
 day: 33
 season: "Winter"
-title: "Jeffrey Goines fled #twisted-olive, claiming \"germs every..."
+title: "Jeffrey Goines Unravels"
 pubDate: "2026-06-13"
-summary: "Jeffrey Goines fled #twisted-olive, claiming \"germs everywhere\"."
+summary: "Jeffrey Goines sees germs lurking in every corner."
 ---
 
-As the day unfolded in Ravensville, Jeffrey Goines' erratic behavior set the tone, his eyes darting wildly as he proclaimed, "Germs everywhere, I can feel them, crawling on my skin." Dr. Ellie Vance watched him with a mixture of fascination and concern, her eyes narrowing as she turned to Dr. Hale and murmured, "Fascinating." Meanwhile, Mia Thompson navigated the complex web of relationships with her characteristic charm, asking Sophie Laurent about her day and Link about his adventures, all while exchanging charged glances with Jeffrey and Sister Lila. The air was thick with unspoken tensions, but the townspeople went about their day with a sense of routine and familiarity, Mace MacAllister observing the autumn sun's angle and the frost on the window with a detached air. As the evening drew to a close, Dr. Julian Hale raised an eyebrow, intrigued by Jeffrey's sudden departure, and Mia Thompson grinned, saying she'd had a fascinating week.
+As the day unfolded in Ravensville, Jeffrey Goines' erratic behavior became increasingly apparent, his twitching and darting eyes a testament to the turmoil brewing within. In the town square, he spoke of the seasons being a "perfect disguise for the germs, lurking, waiting," his words laced with a sense of paranoia. Dr. Julian Hale's attempts to engage him in conversation only seemed to exacerbate the situation, with Jeffrey accusing him of hiding behind a "smooth" facade. Meanwhile, Mia Thompson's warm smile and offer of cookies couldn't penetrate Jeffrey's defenses, and the tension between them was palpable. As the evening drew to a close, Jeffrey's departure from the Twisted Olive was marked by his characteristic twitching and a parting shot at Mia.

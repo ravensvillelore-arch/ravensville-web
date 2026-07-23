@@ -1,9 +1,9 @@
 ---
 day: 9
 season: "Autumn"
-title: "Mace MacAllister witnessed a night of sharing secrets in ..."
+title: "Mace MacAllister's Uneasy Night"
 pubDate: "2026-05-20"
-summary: "Mace MacAllister witnessed a night of sharing secrets in Ravensville."
+summary: "Mace MacAllister sipped his drink, eyes never leaving the room."
 ---
 
-As the fog rolled in early, Mace MacAllister stood in the town square, observing the familiar faces of Link Brooks and Dr. Julian Hale, who noted that "everyone thinks they're passing through" this peculiar town. The evening unfolded at the Twisted Olive, where Dr. Julian Hale remarked on Mia's ability to create an atmosphere that's the "real star of the show," and Mace MacAllister wryly commented on a night of sharing secrets. Sophie Laurent and Dr. Ellie Vance found common ground, exchanging warm smiles, while Jeffrey Goines' frantic laughter echoed through the streets, a stark contrast to the gentle warmth spread by Sister Lila Voss. As the night wore on, the threads of connection between the townspeople grew stronger, woven from the stories and conversations shared. The day was a tapestry of human connection, with each person adding their own unique thread to the narrative.
+As the fog rolled in early, Mace MacAllister's gaze drifted across the town square, his eyes meeting Dr. Julian Hale's and Link Brooks' in a moment of quiet understanding. Later, at the Twisted Olive, Dr. Hale noted that Mia's latest concoction had created a space where the atmosphere was the real star, but Mace remained unimpressed, observing that it was a night for sharing things better left unshared. As the evening wore on, Sister Lila Voss sensed the threads of connection weaving the group together, while Jeffrey Goines' frantic laughter cut through the calm. The air was electric, and Dr. Ellie Vance's eyes locked onto Jeffrey's frantic expression, searching for the source of his concern. Amidst the gentle warmth and buzzing drama, Mace's eyes never left the room, taking it all in with a mix of curiosity and detachment.

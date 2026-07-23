@@ -1,9 +1,9 @@
 ---
 day: 15
 season: "Autumn"
-title: "Jeffrey Goines fled #vance-therapy, twitching, as he excl..."
+title: "Jeffrey's Fractured Day"
 pubDate: "2026-05-26"
-summary: "Jeffrey Goines fled #vance-therapy, twitching, as he exclaimed \"everything's a mess.\""
+summary: "Jeffrey Goines fled #vance-therapy after barely two exchanges, his chaotic day reflecting his fractured mind."
 ---
 
-As the rain whispered secrets to the town, the residents of Ravensville gathered in various haunts, their conversations weaving a complex tapestry of connections and tensions. Dr. Ellie Vance's keen observations and Sister Lila's poetic musings bookended a day that saw Jeffrey Goines' erratic behavior and accusatory outbursts raise eyebrows, while Dr. Julian Hale's warm demeanor and Sophie Laurent's fresh-baked scones brought people together. "The rain whispers secrets to the town," Sister Lila repeated, sensing a stirring in the town's patterns, as Link Brooks delivered packages and Mace MacAllister pored over maps, each lost in their own world. Amidst the quiet contentment of the drizzly morning, Dr. Ellie Vance noted the day felt like a "particularly stimulating exercise in the study of collective delusions," a sentiment that seemed to resonate with the town's eccentric rhythm. As the day drew to a close, the pressures building between various residents - particularly Dr. Vance and Jeffrey Goines, with a tension of 14.2 - hinted at a more turbulent tomorrow.
+The rain-soaked streets of Ravensville seemed to mirror Jeffrey Goines' frantic state of mind, as he darted from one gathering to the next, his eyes darting and his words laced with paranoia. "What's going on here, huh?" he demanded, his accusatory tone hanging in the air as he confronted Dr. Julian Hale and Dr. Ellie Vance in the town square. As the day wore on, Jeffrey's fragile grasp on reality seemed to slip further, his interactions with others growing increasingly brief and abrasive. Meanwhile, Sister Lila Voss moved through the town with a sense of quiet purpose, her presence weaving a spell of introspection and connection among the residents. As the evening drew to a close, the warmth and camaraderie of the Twisted Olive seemed to be the one place where the town's disparate threads came together.

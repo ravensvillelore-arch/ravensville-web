@@ -1,9 +1,9 @@
 ---
 day: 7
 season: "Autumn"
-title: "Dr"
+title: "Julian's Nocturnal Gathering"
 pubDate: "2026-05-19"
-summary: "Dr. Julian Hale found the overcast sky \"quite intriguing\" as he strolled through town."
+summary: "Julian pondered the sky's effect on perspective."
 ---
 
-As the overcast sky hung above Ravensville, Dr. Julian Hale mused to Sophie Laurent about its intrigue, saying "the way" it made everything feel was quite captivating, and this sense of curiosity seemed to permeate the day, as Mace MacAllister later noted to Link Brooks, and Jeffrey Goines' wild laughter echoed through the misty morning, sparking Dr. Ellie Vance's interest. The conversations wove together like the threads of a tapestry, with each person adding their own unique perspective, from Link Brooks' neutral expression to Sister Lila Voss' gentle hum of energy. As the day drew to a close, the residents of Ravensville reflected on the subtle dynamics and intriguing observations that had unfolded, with Dr. Julian Hale likening it to a "lazy summer morning, warm with the promise of subtle observations." The day was a testament to the town's peculiar charm, where the ordinary and extraordinary blended seamlessly together. As Mace MacAllister slid into the stool next to Link Brooks, he nodded slightly, and the evening wore on, filled with the promise of new connections and unexpected encounters.
+As the overcast sky cast its shadow over Ravensville, Dr. Julian Hale found himself drawn to the town square, where he met Sophie Laurent and later engaged in a discussion with Mace MacAllister and Link Brooks. The night air was filled with intrigue, and Julian noted that "the same roads we drive, yet the sky above" can change one's perspective. Meanwhile, Jeffrey Goines' intense observations and laughter added to the evening's mystique, leaving Dr. Ellie Vance to ponder the subtleties of human interaction. As the day unfolded, the town's residents continued to navigate their complex relationships, with Mace MacAllister and Sister Lila Voss exchanging quiet glances. The evening ended with a sense of warm anticipation, much like a lazy summer morning.

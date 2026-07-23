@@ -1,9 +1,9 @@
 ---
 day: 16
 season: "Autumn"
-title: "Mace MacAllister nodded at Mia, eyes scanning the area, a..."
+title: "Jeffrey Goines' Turbulent Day"
 pubDate: "2026-05-27"
-summary: "Mace MacAllister nodded at Mia, eyes scanning the area, as he said \"I'll play the game\"."
+summary: "Jeffrey Goines saw right through Mia's bright smile."
 ---
 
-As the autumn scene unfolded outside Dr. Ellie Vance's office, she stood by the large window, observing her patients with a keen eye, and suggested that their true selves often reside beneath the surface, a notion that resonated with Sophie Laurent, who was trying to get a jump start on the day. Meanwhile, Jeffrey Goines's interactions with others, including Mia Thompson and Dr. Julian Hale, were marked by his twitching and sarcastic remarks, as he navigated the complex web of relationships in the town. At the Twisted Olive, Mia's big smile and warm demeanor were a stark contrast to Jeffrey's intensity, as she exchanged hugs and smiles with Sophie Laurent, while Jeffrey's eyes darted around, sensing secrets and undercurrents. Dr. Julian Hale sensed a subtle tension building in the town, while Sister Lila's brief appearance at Brewsome hinted at her own reservations. As the day drew to a close, the townspeople's reflections on the day's events revealed a complex tapestry of emotions and relationships.
+As the day unfolded, Jeffrey Goines' antics wove a complex tapestry, with Dr. Ellie Vance's therapy session serving as the catalyst. "I see right through it, don't I, Dr. Vance?" Jeffrey quipped, his eyes darting around the room, as he exchanged barbs with Mia Thompson, who remained unfazed, her bright smile a stark contrast to Jeffrey's twitching demeanor. Meanwhile, Mace MacAllister observed the interactions with a keen eye, his curt nods and glances speaking volumes about his own thoughts. As the sun dipped below the horizon, the group reconvened at the Twisted Olive, where Sophie Laurent's warm hugs and Mia's cheerful banter attempted to diffuse the tension, but Jeffrey's probing questions and sarcastic remarks continued to simmer just below the surface. In the end, the day's peculiar juxtaposition of idyllic small-town charm and unspoken undercurrents of tension left Dr. Ellie Vance pondering the true selves that lay beneath the surface.

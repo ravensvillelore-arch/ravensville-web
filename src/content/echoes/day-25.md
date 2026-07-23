@@ -1,9 +1,9 @@
 ---
 day: 25
 season: "Autumn"
-title: "Jeffrey Goines fled #town-square, his sanity suffocating"
+title: "Jeffrey Goines' Uneasy Night"
 pubDate: "2026-06-05"
-summary: "Jeffrey Goines fled #town-square, his sanity suffocating."
+summary: "Jeffrey Goines twitched, saying \"the drinks flow like the lies\" at The Twisted Olive."
 ---
 
-As the mist-shrouded landscape of Ravensville unfolded, Dr. Julian Hale remarked on the "lovely" gathering at #brewsome, where Sister Lila Voss sensed the "threads of community" weaving together. Meanwhile, Jeffrey Goines made brief appearances throughout the day, leaving places like #town-square and #brewsome after barely two exchanges, his eyes darting with a sense of suffocating sanity. At The Twisted Olive, Sophie Laurent warmed the space with her smile, asking Dr. Ellie Vance about her week, while Link Brooks observed the scene with his characteristic neutrality. As the evening drew to a close, Sister Lila's poetic words about the "warmth of this space" enveloping them like a "gentle mother's embrace" seemed to capture the essence of the day. In the end, it was just another day in Ravensville, where the familiar rhythms and connections sustained its residents.
+As the day unfolded in Ravensville, the usual warmth of #brewsome and #twisted-olive was palpable, with Dr. Julian Hale and Sister Lila Voss exchanging poetic words about the "gentle hum of connection" and "threads of community". Meanwhile, Dr. Ellie Vance stopped by #brewsome, her eyes scanning the room as she ordered a black coffee, and Mia Thompson welcomed patrons to The Twisted Olive with her signature smile. However, beneath the surface, pressure was building, particularly between Jeffrey Goines and Mia Thompson, as well as Mace MacAllister and Sister Lila. As the night drew to a close, Jeffrey's twitching and sarcastic remarks hinted at a deeper unease, and Sister Lila's departure from several gatherings suggested a restlessness in the air.
