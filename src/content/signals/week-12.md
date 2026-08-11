@@ -11,11 +11,11 @@ days:
 - 79
 - 80
 pubDate: '2026-07-31'
-title: 'TODO: Add title'
-summary: 'TODO: Add summary'
+title: Unraveling Ravensville's Threads
+summary: Jeffrey's outburst exposes town tensions.
 location: twisted-olive
 sim_day: 76
-setup: 'TODO: Add setup paragraph.'
+setup: At the Twisted Olive, Sister Lila Voss weaves a poetic narrative, but Jeffrey Goines' erratic behavior disrupts the calm. As the evening light pours in, the group's dynamics shift. The conversation is a delicate dance of revelation and concealment, with each participant hiding secrets. Will the threads of connection hold or unravel?
 exchanges:
 - character: Sister Lila Voss
   time_label: Early Spring, Day 76 - Early Evening
@@ -53,5 +53,5 @@ exchanges:
 - character: Sister Lila Voss
   time_label: Early Spring, Day 76 - Late Night
   line: The threads of tension and curiosity are weaving together in this space, aren't they, Mia, Dr. Ellie, Link? Jeffrey's words have stirred the air, like a stone cast into a still pond, and now the ripples are spreading. As I listen to the whispers of this town, I sense that Ravensville is asking us to peel back the layers, to reveal the secrets we keep from ourselves and others. The current is shifting, and I feel the gentle tug of the universe, guiding me toward the town square, where the night air is filled with possibilities.
-closing: 'TODO: Add closing line.'
+closing: Chaos ensues, silence follows.
 ---

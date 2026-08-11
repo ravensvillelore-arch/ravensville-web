@@ -12,11 +12,11 @@ days:
 - 73
 - 74
 pubDate: '2026-07-24'
-title: 'TODO: Add title'
-summary: 'TODO: Add summary'
+title: Conspiracy Unravels
+summary: Jeffrey's paranoia erupts
 location: twisted-olive
 sim_day: 69
-setup: 'TODO: Add setup paragraph.'
+setup: At the Twisted Olive, Sister Lila Voss senses a shift in the town's current. Jeffrey Goines' turmoil is palpable. As the evening wears on, the group's dynamics become increasingly tense. Will the warmth of the gathering space be enough to calm the storm brewing within?
 exchanges:
 - character: Sister Lila Voss
   time_label: Early Spring, Day 69 - Early Evening
@@ -54,5 +54,5 @@ exchanges:
 - character: Jeffrey Goines
   time_label: Early Spring, Day 69 - Late Night
   line: '(twitching) Ah, the warmth of #twisted-olive, it''s a trap, a trap to make us feel safe, to make us let our guard down, Ha! (eyes darting around the room) Mia, Link, you think you''re safe here, but I know the truth, I know the germs are everywhere, (laughing wildly) even in the air we breathe! (leaning in, voice lowering) What''s in the drinks, Mia, what''s in the drinks, hmm? (wagging finger) You can''t trust anything, anyone, Aah! (glancing at Link) You, Link, you''re quiet, too quiet, what are you thinking, what are you hiding? (tapping foot impatiently) Hahaha!'
-closing: 'TODO: Add closing line.'
+closing: Chaos ensues, night wears on
 ---
